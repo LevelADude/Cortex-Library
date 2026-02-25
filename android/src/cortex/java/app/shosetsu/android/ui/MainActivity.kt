@@ -32,6 +32,7 @@ import app.shosetsu.android.data.repo.SourcesRepository
 import app.shosetsu.android.data.store.CortexDataStore
 import app.shosetsu.android.ui.nav.Destinations
 import app.shosetsu.android.ui.screens.DownloadsScreen
+import app.shosetsu.android.ui.screens.ResultDetailsScreen
 import app.shosetsu.android.ui.screens.SearchScreen
 import app.shosetsu.android.ui.screens.SettingsScreen
 import app.shosetsu.android.ui.screens.SourcesScreen
@@ -53,7 +54,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             MaterialTheme {
                 val sourcesViewModel: SourcesViewModel = viewModel(factory = CortexViewModelFactory { SourcesViewModel(sourcesRepository) })
-                val downloadsViewModel: DownloadsViewModel = viewModel(factory = CortexViewModelFactory { DownloadsViewModel(downloadsRepository) })
+                val downloadsViewModel: DownloadsViewModel = viewModel(factory = CortexViewModelFactory {
+                    DownloadsViewModel(downloadsRepository) { sourcesViewModel.sources.value }
+                })
                 val searchViewModel: SearchViewModel = viewModel(factory = CortexViewModelFactory {
                     SearchViewModel(searchRepository) { sourcesViewModel.sources.value }
                 })
@@ -69,6 +72,7 @@ fun CortexApp(
     sourcesViewModel: SourcesViewModel,
     downloadsViewModel: DownloadsViewModel
 ) {
+    val detailsRoute = "result_details"
     val navController = rememberNavController()
     val snackbarHostState = remember { SnackbarHostState() }
 
@@ -97,8 +101,11 @@ fun CortexApp(
     ) { padding ->
         NavHost(navController, startDestination = Destinations.Search.route, modifier = Modifier.padding(padding)) {
             composable(Destinations.Search.route) {
-                SearchScreen(searchViewModel, sourcesViewModel, downloadsViewModel, snackbarHostState)
+                SearchScreen(searchViewModel, sourcesViewModel, downloadsViewModel, snackbarHostState) {
+                    navController.navigate(detailsRoute)
+                }
             }
+            composable(detailsRoute) { ResultDetailsScreen(searchViewModel, sourcesViewModel, downloadsViewModel, snackbarHostState) }
             composable(Destinations.Sources.route) { SourcesScreen(sourcesViewModel) }
             composable(Destinations.Downloads.route) { DownloadsScreen(downloadsViewModel) }
             composable(Destinations.Settings.route) { SettingsScreen() }

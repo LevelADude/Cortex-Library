@@ -25,6 +25,34 @@ class SourcesRepository(private val dataStore: CortexDataStore) {
             notes = "Built-in OpenAlex Works API preset"
         ),
         Source(
+            id = "preset_arxiv",
+            name = "arXiv",
+            baseUrl = "https://export.arxiv.org",
+            type = SourceType.Api,
+            configJson = json.encodeToString(
+                ApiSourceConfig(
+                    endpointPath = "/api/query",
+                    queryParam = "search_query",
+                    limitParam = "max_results"
+                )
+            ),
+            notes = "Built-in arXiv Atom API preset"
+        ),
+        Source(
+            id = "preset_open_library",
+            name = "Open Library",
+            baseUrl = "https://openlibrary.org",
+            type = SourceType.Api,
+            configJson = json.encodeToString(
+                ApiSourceConfig(
+                    endpointPath = "/search.json",
+                    queryParam = "q",
+                    limitParam = "limit"
+                )
+            ),
+            notes = "Built-in Open Library preset (TODO: evaluate DOAB selectors/API stability)"
+        ),
+        Source(
             id = "preset_demo_scrape",
             name = "Demo Scrape Source",
             baseUrl = "asset://demo_scrape_search.html",

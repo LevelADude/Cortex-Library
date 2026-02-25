@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <entry>
+    <id>http://arxiv.org/abs/2401.12345v1</id>
+    <updated>2024-01-20T12:00:00Z</updated>
+    <published>2024-01-20T12:00:00Z</published>
+    <title>  A Test arXiv Paper  </title>
+    <summary>Simple summary</summary>
+    <author><name>Jane Doe</name></author>
+    <author><name>John Roe</name></author>
+    <link rel="alternate" type="text/html" href="https://arxiv.org/abs/2401.12345v1"/>
+    <link title="pdf" rel="related" type="application/pdf" href="https://arxiv.org/pdf/2401.12345v1.pdf"/>
+  </entry>
+</feed>
