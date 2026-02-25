@@ -2,13 +2,17 @@ package app.shosetsu.android.ui.vm
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import app.shosetsu.android.data.repo.SearchOptions
 import app.shosetsu.android.data.repo.SearchRepository
+import app.shosetsu.android.data.repo.SearchSortMode
 import app.shosetsu.android.domain.model.SearchResult
 import app.shosetsu.android.domain.model.Source
 import kotlinx.coroutines.FlowPreview
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -17,7 +21,11 @@ data class SearchUiState(
     val query: String = "",
     val isLoading: Boolean = false,
     val results: List<SearchResult> = emptyList(),
-    val sourceErrors: List<String> = emptyList()
+    val sourceErrors: List<String> = emptyList(),
+    val onlyWithPdf: Boolean = false,
+    val sourceFilterIds: Set<String> = emptySet(),
+    val sortMode: SearchSortMode = SearchSortMode.Relevance,
+    val selectedResult: SearchResult? = null
 )
 
 @OptIn(FlowPreview::class)
@@ -28,19 +36,35 @@ class SearchViewModel(
     private val _uiState = MutableStateFlow(SearchUiState())
     val uiState: StateFlow<SearchUiState> = _uiState.asStateFlow()
 
+    private var activeSearchJob: Job? = null
+
     init {
         viewModelScope.launch {
-            _uiState.debounce(500).collect { state ->
-                val query = state.query
-                if (query.isBlank()) {
-                    _uiState.update { it.copy(results = emptyList(), sourceErrors = emptyList(), isLoading = false) }
-                    return@collect
+            combine(
+                _uiState.debounce(450),
+                _uiState
+            ) { a, _ -> a }
+                .collect { state ->
+                    searchInternal(state.query, state.onlyWithPdf, state.sourceFilterIds, state.sortMode)
                 }
-                _uiState.update { it.copy(isLoading = true) }
-                val response = searchRepository.search(query, sourcesProvider().filter { it.enabled })
-                _uiState.update {
-                    it.copy(isLoading = false, results = response.results, sourceErrors = response.sourceErrors)
-                }
+        }
+    }
+
+    private fun searchInternal(query: String, onlyWithPdf: Boolean, sourceFilters: Set<String>, sortMode: SearchSortMode) {
+        activeSearchJob?.cancel()
+        activeSearchJob = viewModelScope.launch {
+            if (query.isBlank()) {
+                _uiState.update { it.copy(results = emptyList(), sourceErrors = emptyList(), isLoading = false) }
+                return@launch
+            }
+            _uiState.update { it.copy(isLoading = true) }
+            val response = searchRepository.search(
+                query,
+                sourcesProvider().filter { it.enabled },
+                SearchOptions(onlyWithPdf = onlyWithPdf, sourceFilterIds = sourceFilters, sortMode = sortMode)
+            )
+            _uiState.update {
+                it.copy(isLoading = false, results = response.results, sourceErrors = response.sourceErrors)
             }
         }
     }
@@ -49,12 +73,29 @@ class SearchViewModel(
         _uiState.update { it.copy(query = query) }
     }
 
-    fun searchNow() {
-        viewModelScope.launch {
-            val current = _uiState.value.query
-            _uiState.update { it.copy(isLoading = true) }
-            val response = searchRepository.search(current, sourcesProvider().filter { it.enabled })
-            _uiState.update { it.copy(isLoading = false, results = response.results, sourceErrors = response.sourceErrors) }
+    fun setOnlyWithPdf(enabled: Boolean) {
+        _uiState.update { it.copy(onlyWithPdf = enabled) }
+    }
+
+    fun toggleSourceFilter(sourceId: String) {
+        _uiState.update {
+            val next = it.sourceFilterIds.toMutableSet().apply {
+                if (contains(sourceId)) remove(sourceId) else add(sourceId)
+            }
+            it.copy(sourceFilterIds = next)
         }
+    }
+
+    fun setSortMode(sortMode: SearchSortMode) {
+        _uiState.update { it.copy(sortMode = sortMode) }
+    }
+
+    fun setSelectedResult(result: SearchResult?) {
+        _uiState.update { it.copy(selectedResult = result) }
+    }
+
+    fun searchNow() {
+        val s = _uiState.value
+        searchInternal(s.query, s.onlyWithPdf, s.sourceFilterIds, s.sortMode)
     }
 }

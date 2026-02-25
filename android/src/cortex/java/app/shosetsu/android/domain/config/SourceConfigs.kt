@@ -10,7 +10,8 @@ data class ApiSourceConfig(
     val queryParam: String = "search",
     val extraParams: Map<String, String> = emptyMap(),
     val headerApiKeyName: String? = null,
-    val apiKey: String? = null
+    val apiKey: String? = null,
+    val limitParam: String = "per-page"
 )
 
 @Serializable
@@ -21,7 +22,9 @@ data class ScrapeSourceConfig(
     val linkSelector: String,
     val pdfLinkSelector: String? = null,
     val nextPageSelector: String? = null,
-    val maxPages: Int = 1
+    val maxPages: Int = 1,
+    val enablePdfResolution: Boolean = false,
+    val allowedPdfDomains: List<String> = emptyList()
 )
 
 object SourceConfigCodec {

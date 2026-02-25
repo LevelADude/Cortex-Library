@@ -1,7 +1,5 @@
 package app.shosetsu.android.ui.screens
 
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -12,20 +10,23 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import app.shosetsu.android.data.repo.SearchSortMode
 import app.shosetsu.android.ui.vm.DownloadsViewModel
 import app.shosetsu.android.ui.vm.SearchViewModel
 import app.shosetsu.android.ui.vm.SourcesViewModel
@@ -36,11 +37,12 @@ fun SearchScreen(
     searchViewModel: SearchViewModel,
     sourcesViewModel: SourcesViewModel,
     downloadsViewModel: DownloadsViewModel,
-    snackbar: SnackbarHostState
+    snackbar: SnackbarHostState,
+    onOpenDetails: () -> Unit
 ) {
     val sources by sourcesViewModel.sources.collectAsState()
     val state by searchViewModel.uiState.collectAsState()
-    val context = LocalContext.current
+    val resolvingIds by downloadsViewModel.resolvingIds.collectAsState()
     val scope = rememberCoroutineScope()
 
     LazyColumn(modifier = Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -54,7 +56,27 @@ fun SearchScreen(
             )
             Spacer(modifier = Modifier.height(8.dp))
             Button(onClick = { searchViewModel.searchNow() }) { Text(if (state.isLoading) "Searching..." else "Search Enabled Sources") }
-            Text("Enabled sources: ${sources.count { it.enabled }}")
+
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 8.dp)) {
+                Text("Only with PDF")
+                Switch(checked = state.onlyWithPdf, onCheckedChange = searchViewModel::setOnlyWithPdf)
+            }
+
+            Text("Sort")
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                SearchSortMode.entries.forEach { sortMode ->
+                    FilterChip(selected = state.sortMode == sortMode, onClick = { searchViewModel.setSortMode(sortMode) }, label = { Text(sortMode.name) })
+                }
+            }
+
+            Text("Filter Sources")
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                sources.filter { it.enabled }.forEach { source ->
+                    val selected = source.id in state.sourceFilterIds
+                    AssistChip(onClick = { searchViewModel.toggleSourceFilter(source.id) }, label = { Text(source.name) })
+                    if (selected) Text("✓", modifier = Modifier.padding(top = 8.dp))
+                }
+            }
             state.sourceErrors.forEach { Text(it, color = MaterialTheme.colorScheme.error) }
         }
 
@@ -67,25 +89,25 @@ fun SearchScreen(
                     Text(result.snippet)
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Button(onClick = {
-                            result.landingUrl?.let { context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(it))) }
-                        }, enabled = result.landingUrl != null) { Text("Open landing page") }
+                            searchViewModel.setSelectedResult(result)
+                            onOpenDetails()
+                        }) { Text("Details") }
                         Button(
                             onClick = {
-                                downloadsViewModel.download(result, sourceName) { downloadRes ->
+                                downloadsViewModel.download(result, sourceName) { downloadRes, resolved ->
                                     scope.launch {
                                         snackbar.showSnackbar(
-                                            if (downloadRes.isSuccess) "Downloaded ${result.title}" else "Download failed: ${downloadRes.exceptionOrNull()?.message}"
+                                            if (downloadRes.isSuccess) {
+                                                "Downloaded ${result.title}"
+                                            } else {
+                                                if (resolved.pdfUrl == null) "No PDF found. Open landing page from details." else "Download failed: ${downloadRes.exceptionOrNull()?.message}"
+                                            }
                                         )
                                     }
                                 }
                             },
-                            enabled = result.pdfUrl != null
-                        ) { Text("Download PDF") }
-                        if (result.pdfUrl == null) {
-                            Button(onClick = { scope.launch { snackbar.showSnackbar("No PDF available for this result") } }) {
-                                Text("No PDF")
-                            }
-                        }
+                            enabled = result.id !in resolvingIds
+                        ) { Text(if (result.id in resolvingIds) "Resolving..." else "Download") }
                     }
                 }
             }
