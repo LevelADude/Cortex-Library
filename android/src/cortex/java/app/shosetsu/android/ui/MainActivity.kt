@@ -26,6 +26,8 @@ import androidx.navigation.compose.rememberNavController
 import app.shosetsu.android.data.connector.ApiSourceConnector
 import app.shosetsu.android.data.connector.ConnectorRegistry
 import app.shosetsu.android.data.connector.ScrapeSourceConnector
+import app.shosetsu.android.data.network.ConnectivityMonitor
+import app.shosetsu.android.data.repo.DebugEventsRepository
 import app.shosetsu.android.data.repo.DownloadsRepository
 import app.shosetsu.android.data.repo.SearchRepository
 import app.shosetsu.android.data.repo.SourcesRepository
@@ -42,6 +44,7 @@ import app.shosetsu.android.ui.vm.CortexViewModelFactory
 import app.shosetsu.android.ui.vm.DownloadsViewModel
 import app.shosetsu.android.ui.vm.SearchViewModel
 import app.shosetsu.android.ui.vm.SourcesViewModel
+import app.shosetsu.android.ui.vm.SettingsViewModel
 import java.net.URLDecoder
 import java.net.URLEncoder
 
@@ -53,18 +56,21 @@ class MainActivity : ComponentActivity() {
         val sourcesRepository = SourcesRepository(dataStore)
         val downloadsRepository = DownloadsRepository(applicationContext, dataStore)
         val connectorRegistry = ConnectorRegistry(ApiSourceConnector(), ScrapeSourceConnector(applicationContext))
-        val searchRepository = SearchRepository(connectorRegistry)
+        val debugEventsRepository = DebugEventsRepository(dataStore)
+        val connectivityMonitor = ConnectivityMonitor(applicationContext)
+        val searchRepository = SearchRepository(connectorRegistry, dataStore, debugEventsRepository)
 
         setContent {
             MaterialTheme {
-                val sourcesViewModel: SourcesViewModel = viewModel(factory = CortexViewModelFactory { SourcesViewModel(sourcesRepository) })
+                val sourcesViewModel: SourcesViewModel = viewModel(factory = CortexViewModelFactory { SourcesViewModel(sourcesRepository, connectorRegistry, debugEventsRepository) })
                 val downloadsViewModel: DownloadsViewModel = viewModel(factory = CortexViewModelFactory {
-                    DownloadsViewModel(downloadsRepository) { sourcesViewModel.sources.value }
+                    DownloadsViewModel(downloadsRepository, { sourcesViewModel.sources.value }, debugEventsRepository)
                 })
                 val searchViewModel: SearchViewModel = viewModel(factory = CortexViewModelFactory {
-                    SearchViewModel(searchRepository) { sourcesViewModel.sources.value }
+                    SearchViewModel(searchRepository, { sourcesViewModel.sources.value }, connectivityMonitor.isOnline)
                 })
-                CortexApp(searchViewModel, sourcesViewModel, downloadsViewModel)
+                val settingsViewModel: SettingsViewModel = viewModel(factory = CortexViewModelFactory { SettingsViewModel(dataStore, debugEventsRepository) })
+                CortexApp(searchViewModel, sourcesViewModel, downloadsViewModel, settingsViewModel)
             }
         }
     }
@@ -74,7 +80,8 @@ class MainActivity : ComponentActivity() {
 fun CortexApp(
     searchViewModel: SearchViewModel,
     sourcesViewModel: SourcesViewModel,
-    downloadsViewModel: DownloadsViewModel
+    downloadsViewModel: DownloadsViewModel,
+    settingsViewModel: SettingsViewModel
 ) {
     val detailsRoute = "result_details"
     val previewRoute = "preview/{filePath}"
@@ -131,7 +138,7 @@ fun CortexApp(
                     navController.navigate("preview/$encoded")
                 }
             }
-            composable(Destinations.Settings.route) { SettingsScreen(downloadsViewModel) }
+            composable(Destinations.Settings.route) { SettingsScreen(downloadsViewModel, settingsViewModel) }
         }
     }
 }

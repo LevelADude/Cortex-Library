@@ -36,10 +36,11 @@ class ApiSourceConnector : SourceConnector {
 
         throttleSource(source.id)
 
+        val effectiveLimit = config.limitOverride ?: limit
         return when {
-            isPmc(source) -> searchPmc(source, query, limit)
+            isPmc(source) -> searchPmc(source, query, effectiveLimit)
             else -> {
-                val url = buildUrl(source, config, query, limit) ?: return emptyList()
+                val url = buildUrl(source, config, query, effectiveLimit) ?: return emptyList()
                 val requestBuilder = Request.Builder().url(url)
                 if (!config.headerApiKeyName.isNullOrBlank() && !config.apiKey.isNullOrBlank()) {
                     requestBuilder.header(config.headerApiKeyName, config.apiKey)

@@ -20,13 +20,14 @@ class ScrapeSourceConnector(private val context: Context) : SourceConnector {
         val encoded = URLEncoder.encode(query, Charsets.UTF_8.name())
         val initialUrl = config.searchUrlTemplate.replace("{query}", encoded)
 
+        val cappedLimit = config.limitOverride ?: limit
         val allResults = mutableListOf<SearchResult>()
         var pageUrl: String? = initialUrl
         var page = 0
-        while (pageUrl != null && page < config.maxPages && allResults.size < limit) {
+        while (pageUrl != null && page < config.maxPages && allResults.size < cappedLimit) {
             val html = fetchHtml(pageUrl)
             val document = Jsoup.parse(html, source.baseUrl)
-            allResults += parseFromDocument(document, source.id, config).take(limit - allResults.size)
+            allResults += parseFromDocument(document, source.id, config).take(cappedLimit - allResults.size)
             pageUrl = config.nextPageSelector?.let { selector ->
                 document.selectFirst(selector)?.absUrl("href").takeUnless { it.isNullOrBlank() }
             }

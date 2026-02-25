@@ -1,7 +1,9 @@
 package app.shosetsu.android.data.resolver
 
 import app.shosetsu.android.data.network.CortexHttpClient
+import app.shosetsu.android.data.repo.DebugEventsRepository
 import app.shosetsu.android.domain.config.SourceConfigCodec
+import app.shosetsu.android.domain.model.DebugLevel
 import app.shosetsu.android.domain.model.SearchResult
 import app.shosetsu.android.domain.model.Source
 import app.shosetsu.android.domain.model.SourceType
@@ -13,13 +15,23 @@ import org.jsoup.Jsoup
 import java.net.URI
 
 class PdfResolverChain(
-    private val resolvers: List<PdfResolver>
+    private val resolvers: List<PdfResolver>,
+    private val debugEventsRepository: DebugEventsRepository? = null
 ) : PdfResolver {
     override suspend fun resolve(result: SearchResult): SearchResult {
         var current = result
         for (resolver in resolvers) {
+            debugEventsRepository?.log(DebugLevel.Info, "resolver", "Resolver step start", sourceId = result.sourceId, details = "step=${resolver.javaClass.simpleName}")
             current = runCatching { resolver.resolve(current) }.getOrDefault(current)
-            if (current.pdfUrl?.contains(".pdf", ignoreCase = true) == true || current.pdfUrl?.contains("/pdf", ignoreCase = true) == true) return current
+            val resolved = current.pdfUrl?.contains(".pdf", ignoreCase = true) == true || current.pdfUrl?.contains("/pdf", ignoreCase = true) == true
+            debugEventsRepository?.log(
+                DebugLevel.Info,
+                "resolver",
+                "Resolver step end",
+                sourceId = result.sourceId,
+                details = "step=${resolver.javaClass.simpleName}, resolved=$resolved, pdfUrl=${current.pdfUrl.orEmpty()}"
+            )
+            if (resolved) return current
         }
         return current
     }

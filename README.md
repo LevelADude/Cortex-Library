@@ -71,3 +71,23 @@ Please open an issue to discuss changes before submitting a PR.
 ## 📜 License
 
 MIT License (recommended)
+
+## Build locally
+
+```bash
+./gradlew :android:assembleDebug
+```
+
+### Regenerate Gradle wrapper JAR
+
+If `gradle-wrapper.jar` is missing in this repository policy, regenerate wrapper artifacts locally:
+
+```bash
+gradle wrapper
+```
+
+## Run tests
+
+```bash
+./gradlew :android:testDebugUnitTest
+```
