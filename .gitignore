@@ -32,3 +32,32 @@ common/build/intermediates/*
 acra.properties
 acra-debug.properties
 acra-uptodown.properties
+
+# --- Repository sanitation defaults ---
+# Gradle
+.gradle/
+build/
+**/build/
+
+# Local config
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Signing
+*.jks
+*.keystore
+
+# Generated
+*.apk
+*.aab
+*.class
+*.log
+*.pdf
+*.jar

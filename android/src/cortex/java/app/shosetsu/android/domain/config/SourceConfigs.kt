@@ -11,7 +11,10 @@ data class ApiSourceConfig(
     val extraParams: Map<String, String> = emptyMap(),
     val headerApiKeyName: String? = null,
     val apiKey: String? = null,
-    val limitParam: String = "per-page"
+    val limitParam: String = "per-page",
+    val limitOverride: Int? = null,
+    val enablePdfResolution: Boolean = false,
+    val allowedPdfDomains: List<String> = emptyList()
 )
 
 @Serializable
@@ -23,6 +26,7 @@ data class ScrapeSourceConfig(
     val pdfLinkSelector: String? = null,
     val nextPageSelector: String? = null,
     val maxPages: Int = 1,
+    val limitOverride: Int? = null,
     val enablePdfResolution: Boolean = false,
     val allowedPdfDomains: List<String> = emptyList()
 )

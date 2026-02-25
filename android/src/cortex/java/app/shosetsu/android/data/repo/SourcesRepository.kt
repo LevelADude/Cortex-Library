@@ -9,8 +9,17 @@ import app.shosetsu.android.domain.model.SourceType
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
+import kotlinx.serialization.Serializable
 import kotlinx.serialization.encodeToString
 import java.util.UUID
+
+@Serializable
+data class SourceImportPreview(
+    val mergedSources: List<Source>,
+    val replaced: Int,
+    val added: Int,
+    val backupPrevious: List<Source>
+)
 
 class SourcesRepository(private val dataStore: CortexDataStore) {
     private val json = SourceConfigCodec.json
@@ -29,13 +38,7 @@ class SourcesRepository(private val dataStore: CortexDataStore) {
             name = "arXiv",
             baseUrl = "https://export.arxiv.org",
             type = SourceType.Api,
-            configJson = json.encodeToString(
-                ApiSourceConfig(
-                    endpointPath = "/api/query",
-                    queryParam = "search_query",
-                    limitParam = "max_results"
-                )
-            ),
+            configJson = json.encodeToString(ApiSourceConfig(endpointPath = "/api/query", queryParam = "search_query", limitParam = "max_results")),
             notes = "Built-in arXiv Atom API preset"
         ),
         Source(
@@ -43,59 +46,31 @@ class SourcesRepository(private val dataStore: CortexDataStore) {
             name = "Open Library",
             baseUrl = "https://openlibrary.org",
             type = SourceType.Api,
-            configJson = json.encodeToString(
-                ApiSourceConfig(
-                    endpointPath = "/search.json",
-                    queryParam = "q",
-                    limitParam = "limit"
-                )
-            ),
-            notes = "Built-in Open Library preset (TODO: evaluate DOAB selectors/API stability)"
+            configJson = json.encodeToString(ApiSourceConfig(endpointPath = "/search.json", queryParam = "q", limitParam = "limit")),
+            notes = "Built-in Open Library preset"
         ),
         Source(
             id = "preset_pmc",
             name = "PubMed Central",
             baseUrl = "https://eutils.ncbi.nlm.nih.gov",
             type = SourceType.Api,
-            configJson = json.encodeToString(
-                ApiSourceConfig(
-                    endpointPath = "/entrez/eutils/esearch.fcgi",
-                    queryParam = "term",
-                    limitParam = "retmax",
-                    extraParams = mapOf("db" to "pmc", "retmode" to "json")
-                )
-            ),
-            notes = "Built-in PubMed Central preset via E-utilities. Uses PMCID-based PDF URL pattern with conservative fallback."
+            configJson = json.encodeToString(ApiSourceConfig(endpointPath = "/entrez/eutils/esearch.fcgi", queryParam = "term", limitParam = "retmax", extraParams = mapOf("db" to "pmc", "retmode" to "json"))),
+            notes = "Built-in PubMed Central preset"
         ),
         Source(
             id = "preset_doab",
             name = "DOAB",
             baseUrl = "https://directory.doabooks.org",
             type = SourceType.Api,
-            configJson = json.encodeToString(
-                ApiSourceConfig(
-                    endpointPath = "/rest/search",
-                    queryParam = "query",
-                    limitParam = "pageSize"
-                )
-            ),
-            notes = "Built-in Directory of Open Access Books preset (API/landing-first mapping)."
+            configJson = json.encodeToString(ApiSourceConfig(endpointPath = "/rest/search", queryParam = "query", limitParam = "pageSize")),
+            notes = "Built-in Directory of Open Access Books preset"
         ),
         Source(
             id = "preset_demo_scrape",
             name = "Demo Scrape Source",
             baseUrl = "asset://demo_scrape_search.html",
             type = SourceType.GenericWeb,
-            configJson = json.encodeToString(
-                ScrapeSourceConfig(
-                    searchUrlTemplate = "asset://demo_scrape_search.html?q={query}",
-                    resultItemSelector = ".result-item",
-                    titleSelector = ".title",
-                    linkSelector = ".title",
-                    pdfLinkSelector = ".pdf-link",
-                    maxPages = 1
-                )
-            ),
+            configJson = json.encodeToString(ScrapeSourceConfig(searchUrlTemplate = "asset://demo_scrape_search.html?q={query}", resultItemSelector = ".result-item", titleSelector = ".title", linkSelector = ".title", pdfLinkSelector = ".pdf-link", maxPages = 1)),
             notes = "Local asset-based source used to validate scraping pipeline"
         )
     )
@@ -105,14 +80,12 @@ class SourcesRepository(private val dataStore: CortexDataStore) {
     }
 
     suspend fun addSource(name: String, baseUrl: String, type: SourceType, notes: String = "", configJson: String?) {
-        val updated = sourcesFlow.first() + Source(
-            id = UUID.randomUUID().toString(),
-            name = name,
-            baseUrl = baseUrl,
-            type = type,
-            notes = notes,
-            configJson = configJson
-        )
+        val updated = sourcesFlow.first() + Source(id = UUID.randomUUID().toString(), name = name, baseUrl = baseUrl, type = type, notes = notes, configJson = configJson)
+        dataStore.saveSourcesJson(json.encodeToString(updated))
+    }
+
+    suspend fun updateSource(updatedSource: Source) {
+        val updated = sourcesFlow.first().map { if (it.id == updatedSource.id) updatedSource else it }
         dataStore.saveSourcesJson(json.encodeToString(updated))
     }
 
@@ -120,4 +93,22 @@ class SourcesRepository(private val dataStore: CortexDataStore) {
         val updated = sourcesFlow.first().map { if (it.id == id) it.copy(enabled = enabled) else it }
         dataStore.saveSourcesJson(json.encodeToString(updated))
     }
+
+    suspend fun exportSourcesJson(): String = json.encodeToString(sourcesFlow.first())
+
+    suspend fun previewImport(jsonPayload: String): SourceImportPreview {
+        val imported = json.decodeFromString<List<Source>>(jsonPayload)
+        val existing = sourcesFlow.first()
+        val mergeResult = SourceImportMerger.merge(existing = existing, imported = imported)
+        return SourceImportPreview(mergeResult.merged, mergeResult.replaced, mergeResult.added, existing)
+    }
+
+    suspend fun applyImport(preview: SourceImportPreview) {
+        dataStore.saveSourcesJson(json.encodeToString(preview.mergedSources))
+    }
+
+    suspend fun resetToDefaults() {
+        dataStore.saveSourcesJson(json.encodeToString(presets))
+    }
+
 }

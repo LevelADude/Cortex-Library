@@ -58,6 +58,12 @@ fun SearchScreen(
             )
             Spacer(modifier = Modifier.height(8.dp))
             Button(onClick = { searchViewModel.searchNow() }) { Text(if (state.isLoading) "Searching..." else "Search Enabled Sources") }
+            if (!state.isOnline) {
+                Text("Offline: showing cached results and downloads", color = MaterialTheme.colorScheme.error)
+            }
+            if (!state.isOnline && state.results.isEmpty()) {
+                Text("Go online to search or switch to Downloads tab.")
+            }
 
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.padding(top = 8.dp)) {
                 Text("Only with PDF")
@@ -140,7 +146,7 @@ fun SearchScreen(
                                     }
                                 }
                             },
-                            enabled = result.id !in resolvingIds
+                            enabled = result.id !in resolvingIds && result.pdfUrl != null
                         ) { Text(if (result.id in resolvingIds) "Resolving..." else "Download") }
                     }
                 }

@@ -1,1 +1,16 @@
 /build
+
+# Gradle
+.gradle/
+build/
+
+# Local config
+local.properties
+
+# Generated
+*.apk
+*.aab
+*.class
+*.log
+*.pdf
+*.jar
