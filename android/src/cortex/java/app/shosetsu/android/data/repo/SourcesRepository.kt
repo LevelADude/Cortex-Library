@@ -53,6 +53,35 @@ class SourcesRepository(private val dataStore: CortexDataStore) {
             notes = "Built-in Open Library preset (TODO: evaluate DOAB selectors/API stability)"
         ),
         Source(
+            id = "preset_pmc",
+            name = "PubMed Central",
+            baseUrl = "https://eutils.ncbi.nlm.nih.gov",
+            type = SourceType.Api,
+            configJson = json.encodeToString(
+                ApiSourceConfig(
+                    endpointPath = "/entrez/eutils/esearch.fcgi",
+                    queryParam = "term",
+                    limitParam = "retmax",
+                    extraParams = mapOf("db" to "pmc", "retmode" to "json")
+                )
+            ),
+            notes = "Built-in PubMed Central preset via E-utilities. Uses PMCID-based PDF URL pattern with conservative fallback."
+        ),
+        Source(
+            id = "preset_doab",
+            name = "DOAB",
+            baseUrl = "https://directory.doabooks.org",
+            type = SourceType.Api,
+            configJson = json.encodeToString(
+                ApiSourceConfig(
+                    endpointPath = "/rest/search",
+                    queryParam = "query",
+                    limitParam = "pageSize"
+                )
+            ),
+            notes = "Built-in Directory of Open Access Books preset (API/landing-first mapping)."
+        ),
+        Source(
             id = "preset_demo_scrape",
             name = "Demo Scrape Source",
             baseUrl = "asset://demo_scrape_search.html",

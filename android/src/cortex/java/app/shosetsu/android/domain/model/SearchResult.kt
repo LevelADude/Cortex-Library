@@ -13,7 +13,10 @@ data class SearchResult(
     val pdfUrl: String? = null,
     val landingUrl: String? = null,
     val fileSize: String? = null,
+    val contentType: ContentType = ContentType.Unknown,
     val language: String? = null,
-    val publisher: String? = null,
+    val publisherOrVenue: String? = null,
+    val identifiers: Map<String, String>? = null,
+    val openAccess: Boolean? = null,
     val tags: List<String> = emptyList()
 )

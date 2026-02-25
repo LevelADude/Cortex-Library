@@ -1,0 +1,19 @@
+{
+  "header": {"type": "esummary", "version": "0.3"},
+  "result": {
+    "uids": ["7891011"],
+    "7891011": {
+      "uid": "7891011",
+      "title": "Open Access Biology Study",
+      "pubdate": "2020 Jan",
+      "fulljournalname": "Journal of Open Biology",
+      "elocationid": "10.1234/job.2020.1",
+      "pmcid": "PMC7891011",
+      "authors": [{"name": "Jane Doe"}, {"name": "John Roe"}],
+      "articleids": [
+        {"idtype": "doi", "value": "10.1234/job.2020.1"},
+        {"idtype": "pmid", "value": "12345678"}
+      ]
+    }
+  }
+}

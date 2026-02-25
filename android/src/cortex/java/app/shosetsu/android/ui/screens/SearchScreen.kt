@@ -26,7 +26,9 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import app.shosetsu.android.data.repo.ContentTypeFilter
 import app.shosetsu.android.data.repo.SearchSortMode
+import app.shosetsu.android.domain.model.ContentType
 import app.shosetsu.android.ui.vm.DownloadsViewModel
 import app.shosetsu.android.ui.vm.SearchViewModel
 import app.shosetsu.android.ui.vm.SourcesViewModel
@@ -62,6 +64,25 @@ fun SearchScreen(
                 Switch(checked = state.onlyWithPdf, onCheckedChange = searchViewModel::setOnlyWithPdf)
             }
 
+            Text("Content")
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                ContentTypeFilter.entries.forEach { filter ->
+                    FilterChip(
+                        selected = state.contentTypeFilter == filter,
+                        onClick = { searchViewModel.setContentTypeFilter(filter) },
+                        label = {
+                            Text(
+                                when (filter) {
+                                    ContentTypeFilter.All -> "All"
+                                    ContentTypeFilter.BooksOnly -> "Books only"
+                                    ContentTypeFilter.PapersOnly -> "Papers only"
+                                }
+                            )
+                        }
+                    )
+                }
+            }
+
             Text("Sort")
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 SearchSortMode.entries.forEach { sortMode ->
@@ -85,6 +106,19 @@ fun SearchScreen(
             Card(modifier = Modifier.fillMaxWidth()) {
                 Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(result.title, fontWeight = FontWeight.Bold)
+                    AssistChip(
+                        onClick = {},
+                        enabled = false,
+                        label = {
+                            Text(
+                                when (result.contentType) {
+                                    ContentType.Paper -> "Paper"
+                                    ContentType.Book -> "Book"
+                                    ContentType.Unknown -> "Unknown"
+                                }
+                            )
+                        }
+                    )
                     Text("$sourceName • ${result.authors} • ${result.year}")
                     Text(result.snippet)
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {

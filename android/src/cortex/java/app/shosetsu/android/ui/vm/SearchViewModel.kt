@@ -2,6 +2,7 @@ package app.shosetsu.android.ui.vm
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import app.shosetsu.android.data.repo.ContentTypeFilter
 import app.shosetsu.android.data.repo.SearchOptions
 import app.shosetsu.android.data.repo.SearchRepository
 import app.shosetsu.android.data.repo.SearchSortMode
@@ -25,6 +26,7 @@ data class SearchUiState(
     val onlyWithPdf: Boolean = false,
     val sourceFilterIds: Set<String> = emptySet(),
     val sortMode: SearchSortMode = SearchSortMode.Relevance,
+    val contentTypeFilter: ContentTypeFilter = ContentTypeFilter.All,
     val selectedResult: SearchResult? = null
 )
 
@@ -45,12 +47,18 @@ class SearchViewModel(
                 _uiState
             ) { a, _ -> a }
                 .collect { state ->
-                    searchInternal(state.query, state.onlyWithPdf, state.sourceFilterIds, state.sortMode)
+                    searchInternal(state.query, state.onlyWithPdf, state.sourceFilterIds, state.sortMode, state.contentTypeFilter)
                 }
         }
     }
 
-    private fun searchInternal(query: String, onlyWithPdf: Boolean, sourceFilters: Set<String>, sortMode: SearchSortMode) {
+    private fun searchInternal(
+        query: String,
+        onlyWithPdf: Boolean,
+        sourceFilters: Set<String>,
+        sortMode: SearchSortMode,
+        contentTypeFilter: ContentTypeFilter
+    ) {
         activeSearchJob?.cancel()
         activeSearchJob = viewModelScope.launch {
             if (query.isBlank()) {
@@ -61,7 +69,12 @@ class SearchViewModel(
             val response = searchRepository.search(
                 query,
                 sourcesProvider().filter { it.enabled },
-                SearchOptions(onlyWithPdf = onlyWithPdf, sourceFilterIds = sourceFilters, sortMode = sortMode)
+                SearchOptions(
+                    onlyWithPdf = onlyWithPdf,
+                    sourceFilterIds = sourceFilters,
+                    sortMode = sortMode,
+                    contentTypeFilter = contentTypeFilter
+                )
             )
             _uiState.update {
                 it.copy(isLoading = false, results = response.results, sourceErrors = response.sourceErrors)
@@ -75,6 +88,10 @@ class SearchViewModel(
 
     fun setOnlyWithPdf(enabled: Boolean) {
         _uiState.update { it.copy(onlyWithPdf = enabled) }
+    }
+
+    fun setContentTypeFilter(filter: ContentTypeFilter) {
+        _uiState.update { it.copy(contentTypeFilter = filter) }
     }
 
     fun toggleSourceFilter(sourceId: String) {
@@ -96,6 +113,6 @@ class SearchViewModel(
 
     fun searchNow() {
         val s = _uiState.value
-        searchInternal(s.query, s.onlyWithPdf, s.sourceFilterIds, s.sortMode)
+        searchInternal(s.query, s.onlyWithPdf, s.sourceFilterIds, s.sortMode, s.contentTypeFilter)
     }
 }

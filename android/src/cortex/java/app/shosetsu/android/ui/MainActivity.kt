@@ -31,7 +31,9 @@ import app.shosetsu.android.data.repo.SearchRepository
 import app.shosetsu.android.data.repo.SourcesRepository
 import app.shosetsu.android.data.store.CortexDataStore
 import app.shosetsu.android.ui.nav.Destinations
+import app.shosetsu.android.ui.preview.PdfPreviewRenderer
 import app.shosetsu.android.ui.screens.DownloadsScreen
+import app.shosetsu.android.ui.screens.PdfPreviewScreen
 import app.shosetsu.android.ui.screens.ResultDetailsScreen
 import app.shosetsu.android.ui.screens.SearchScreen
 import app.shosetsu.android.ui.screens.SettingsScreen
@@ -40,6 +42,8 @@ import app.shosetsu.android.ui.vm.CortexViewModelFactory
 import app.shosetsu.android.ui.vm.DownloadsViewModel
 import app.shosetsu.android.ui.vm.SearchViewModel
 import app.shosetsu.android.ui.vm.SourcesViewModel
+import java.net.URLDecoder
+import java.net.URLEncoder
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -73,8 +77,10 @@ fun CortexApp(
     downloadsViewModel: DownloadsViewModel
 ) {
     val detailsRoute = "result_details"
+    val previewRoute = "preview/{filePath}"
     val navController = rememberNavController()
     val snackbarHostState = remember { SnackbarHostState() }
+    val previewRenderer = remember { PdfPreviewRenderer(maxPages = 5) }
 
     Scaffold(
         snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -105,10 +111,27 @@ fun CortexApp(
                     navController.navigate(detailsRoute)
                 }
             }
-            composable(detailsRoute) { ResultDetailsScreen(searchViewModel, sourcesViewModel, downloadsViewModel, snackbarHostState) }
+            composable(detailsRoute) {
+                ResultDetailsScreen(searchViewModel, sourcesViewModel, downloadsViewModel, snackbarHostState) { filePath ->
+                    val encoded = URLEncoder.encode(filePath, Charsets.UTF_8.name())
+                    navController.navigate("preview/$encoded")
+                }
+            }
+            composable(previewRoute) { entry ->
+                val encodedPath = entry.arguments?.getString("filePath").orEmpty()
+                val filePath = URLDecoder.decode(encodedPath, Charsets.UTF_8.name())
+                PdfPreviewScreen(filePath = filePath, renderer = previewRenderer, onOpenExternal = {
+                    app.shosetsu.android.util.openPdf(navController.context, filePath)
+                })
+            }
             composable(Destinations.Sources.route) { SourcesScreen(sourcesViewModel) }
-            composable(Destinations.Downloads.route) { DownloadsScreen(downloadsViewModel) }
-            composable(Destinations.Settings.route) { SettingsScreen() }
+            composable(Destinations.Downloads.route) {
+                DownloadsScreen(downloadsViewModel) { filePath ->
+                    val encoded = URLEncoder.encode(filePath, Charsets.UTF_8.name())
+                    navController.navigate("preview/$encoded")
+                }
+            }
+            composable(Destinations.Settings.route) { SettingsScreen(downloadsViewModel) }
         }
     }
 }
