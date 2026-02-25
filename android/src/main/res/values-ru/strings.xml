@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources> 
+	<string name="app_name">Monogatari</string>
+	<string name="website">Сайт</string>
+	<string name="github" translatable="false">Gitlab</string>
+	<string name="matrix" translatable="false">Matrix</string>
+	<string name="discord" translatable="false">Discord</string>
+	<string name="header_text">Читайте новеллы прямо на своем телефоне!</string>
+	<string name="todo">TODO</string>
+	<string name="navigation_drawer_open">Открыть навигационный ящик</string>
+	<string name="navigation_drawer_close">Закрыть навигационный ящик</string>
+	<string name="search">Поиск</string>
+	<string name="filter">Фильтр</string>
+	<string name="library">Библиотека</string>
+	<string name="updates">Обновления</string>
+	<string name="extensions">Расширения</string>
+	<string name="downloads">Загрузки</string>
+	<string name="settings">Настройки</string>
+	<string name="settings_download">Настройки > Загрузка</string>
+	<string name="settings_update">Настройки > Обновление</string>
+	<string name="settings_view">Настройки > Вид</string>
+	<string name="settings_reader">Настройки > Считыватель</string>
+	<string name="settings_advanced">Настройки > Дополнительно</string>
+	<string name="fragment_backup_title">Резервное копирование</string>
+	<string name="text_size">Размер текста</string>
+	<string name="paragraph_spacing">Расстояние между абзацами</string>
+	<string name="paragraph_indent">Отступ абзаца</string>
+	<string name="novel_author">Автор(ы):</string>
+	<string name="download">Скачать</string>
+    <string name="fragment_novel_chapter_position">Позиция:</string>
+	<string name="backup_now">Резервное копирование сейчас</string>
+	<string name="pending">В ожидании</string>
+	<string name="downloaded">Загружено</string>
+	<string name="none">Нет</string>
+	<string name="select_all">Выбрать все</string>
+	<string name="deselect_all">Отменить выбор всех</string>
+	<string name="retry">Повторная попытка</string>
+	<string name="read">Прочитанные главы</string>
+	<string name="unread">Непрочитанные главы</string>
+	<string name="version">Версия</string>
+	<string name="report_bug">Сообщить об ошибке</string>
+	<string name="disclaimer">Отказ от ответственности</string>
+	<string name="license">Лицензия</string>
+	<string name="privacy_policy">Политика конфиденциальности</string>
+	<string name="theme">Тема:</string>
+	<string name="select_between">Выберите между</string>
+	<string name="remove">Удалить</string>
+	<string name="update_now">Обновить сейчас</string>
+	<string name="migrate_sources">Перенос источников</string>
+	<string name="selection">Выбор</string>
+	<string name="migrate_source">Перенести источник</string>
+	<string name="artist_s">Художник(и):</string>
+	<string name="marking_mode">Метод маркировки</string>
+	<string name="paused">Перерыв</string>
+	<string name="completed">Завершено</string>
+	<string name="publishing">Выпускается</string>
+	<string name="unknown">Неизвестно</string>
+	<string name="restore_now">Восстановить сейчас</string>
+	<string name="settings_reader_tap_to_scroll_title">Нажмите для прокрутки</string>
+	<string name="open_in_browser">Открыть в браузере</string>
+	<string name="open_in">Открыто в</string>
+	<string name="reader">Читатель</string>
+	<string name="default_reader">По умолчанию</string>
+	<string name="remove_novel_cache">Удалить кэш новелл</string>
+	<string name="action_webview_back">Назад</string>
+	<string name="action_webview_forward">Вперед</string>
+	<string name="action_webview_refresh">Обновить</string>
+	<string name="notification_app_update_check">Проверка обновления приложений</string>
+	<string name="notification_app_update_available_version">Доступно обновление %s</string>
+	<string name="notification_app_update_install_title">Установка обновления приложения</string>
+	<string name="notification_app_update_loading">Обновление загружаемого приложения</string>
+	<string name="notification_app_update_downloading">Загрузка обновления приложения</string>
+	<string name="notification_app_update_install">Установите обновление приложения</string>
+	<string name="update_app_now_question">Обновить приложение сейчас?</string>
+	<string name="update_not_interested">хм, не интересно</string>
+	<string name="light">Свет</string>
+	<string name="sepia">Сепия</string>
+	<string name="dark">Темный</string>
+	<string name="light_dark">Серый</string>
+	<string name="custom">Пользовательский</string>
+	<string name="action_global_search_hint">Глобальный поиск…</string>
+	<string name="download_next_chapter">Скачать следующую главу</string>
+	<string name="download_next_5_chapters">Скачать следующие 5 глав</string>
+	<string name="download_next_10_chapters">Скачать следующие 10 глав</string>
+	<string name="download_custom_chapters">Скачать заказ</string>
+	<string name="update_complete">Завершенное обновление</string>
+	<string name="you_not_online">Вас нет в сети</string>
+	<string name="download_chapter_updates">Скачать обновления главы</string>
+	<string name="uninstall">Удалить</string>
+	<string name="install">Установите</string>
+	<string name="update">Обновление</string>
+	<string name="chapters">Главы</string>
+	<string name="today">Сегодня</string>
+	<string name="yesterday">Вчера</string>
+	<string name="view">Посмотреть</string>
+	<string name="advanced">Расширенный</string>
+	<string name="backup">Резервное копирование</string>
+	<string name="loading">Загрузка…</string>
+	<string name="amoled">Amoled</string>
+	<string name="crashCommentPromt">Отчет об аварии</string>
+	<string name="crashDialogText">Приложение потерпело краш. Отправить отчет разработчикам?</string>
+	<string name="columns_of_novel_listing_p">Столбцы новелл в портретном режиме</string>
+	<string name="columns_of_novel_listing_h">Столбцы новелл в альбомном режиме</string>
+	<string name="columns_zero_automatic">0 означает автоматический</string>
+	<string name="normal">Компактная сетка</string>
+	<string name="compressed">Таблица</string>
+	<string name="comfy">Удобная сетка</string>
+	<string name="novel_card_type_selector_title">Вид списка</string>
+	<string name="novel_card_type_selector_desc">Переключение между сеткой и таблицей для отображения новелл</string>
+	<string name="novel_badge_toast_title">Тост</string>
+	<string name="novel_badge_toast_desc">Тост при нажатии на значок непрочитанного, чтобы объяснить, для чего он нужен</string>
+	<string name="apply">Применить</string>
+	<string name="reset">Сброс</string>
+	<string name="listings">Списки</string>
+	<string name="updating">Обновление</string>
+	<string name="intro_title_greet">Добро пожаловать в Monogatari!</string>
+	<string name="intro_what_is_app">Что такое Monogatari?</string>
+	<string name="intro_perm_title">Разрешения</string>
+	<string name="intro_happy_end">Замечательно!</string>
+	<string name="intro_happy_end_desc">Это все для вступления, читайте на здоровье!</string>
+	<string name="backup_settings_option">Резервное копирование настроек?</string>
+	<string name="backup_chapters_option">Резервные главы?</string>
+	<string name="backup_chapters_option_description">По умолчанию включено, при выключении прогресс не сохраняется</string>
+	<string name="backup_settings_option_desc">По умолчанию - выключено, что не сохранит ваши настройки</string>
+	<string name="regret">Эта функция еще не была восстановлена из-за нехватки времени :(</string>
+	<string name="installing">Установка</string>
+    <string name="delete">Удалить</string>
+    <string name="pause">Пауза</string>
+    <string name="start">Начало</string>
+    <string name="extension_image_desc">Изображение этого расширения</string>
+    <string name="share">Поделиться</string>
+    <string name="browse">Обзор</string>
+    <string name="more">Подробнее</string>
+    <string name="restart">Перезапустить</string>
+    <string name="need_restart">Необходимо возобновить деятельность</string>
+    <string name="never_mind">Неважно</string>
+    <string name="fragment_novel_in_library">В библиотеке</string>
+    <string name="fragment_novel_add_to_library">Добавить в библиотеку</string>
+    <string name="obsolete_extension">Устаревшее расширение! Пожалуйста, удалите.</string>
+    <string name="id_label">ID:</string>
+    <string name="repositories">Репозитории</string>
+    <string name="settings_reader_volume_scroll_title">Прокрутка громкости</string>
+    <string name="all">Все</string>
+    <string name="about">Информация</string>
+    <string name="check_for_app_update">Проверка обновления приложения</string>
+    <string name="source_licenses">Лицензия open-source</string>
+    <string name="inverse_selection">Обратный выбор</string>
+    <string name="downloading">Загрузка</string>
+	<string name="error">Ошибка</string>
+	<string name="resume">Продолжить</string>
+	<string name="waiting">Ожидание</string>
+	<string name="settings_reader_title_mark_read_as_reading">Отметить прочитанное как "прочитанное"</string>
+	<string name="settings_reader_desc_mark_read_as_reading">Позволяет читателю пометить прочитанную главу как "прочитанную" при ее открытии.</string>
+	<string name="no_more_chapters">Больше нету глав</string>
+	<string name="follow_system_theme">Следовать за системой</string>
+	<string name="emerald_manuscript_theme">Emerald Manuscript</string>
+	<string name="midnight_ink_gold_theme">Midnight Ink Gold</string>
+	<string name="sort">Сортировать</string>
+	<string name="bookmarked">В закладки</string>
+	<string name="genres">Жанры</string>
+	<string name="tags">Теги</string>
+	<string name="authors">Авторы</string>
+	<string name="artists">Художники</string>
+	<string name="unread_status">Непрочитанный статус</string>
+	<string name="update_novel">Обновление новелл</string>
+	<string name="settings_backup_alert_select_location_title">Выберите местоположение</string>
+	<string name="settings_backup_alert_select_backup_title">Выберите резервное копирование</string>
+	<string name="fragment_backup_settings_label">Настройки резервного копирования</string>
+	<string name="settings_backup_alert_location_external">Внешний</string>
+	<string name="settings_backup_alert_location_internal">Внутренний</string>
+	<string name="restore_notification_content_text_outdated">Резервное копирование устарело</string>
+	<string name="restore_notification_content_missing_key">Резервная копия не содержит \'version\' ключ</string>
+	<string name="restore_notification_content_decoding_string">Декодирование</string>
+	<string name="restore_notification_content_unzipping_bytes">Распаковка</string>
+	<string name="restore_notification_content_unexpected_empty">Получено пустое, этого не должно происходить</string>
+	<string name="restore_notification_content_starting">Начало восстановления</string>
+	<string name="restore_notification_title_adding_repos">Добавление репозиториев</string>
+	<string name="restore_notification_content_novel_load">Загрузка данных о новеллах</string>
+	<string name="restore_notification_content_novel_save">Сохранение данных о новеллах</string>
+    <string name="restore_notification_content_novel_chapters_save">Сохранение глав новелл</string>
+    <string name="restore_notification_content_chapters_load">Загрузка глав из базы данных</string>
+    <string name="restore_notification_content_completed">Завершено!</string>
+    <string name="restore_notification_subtitle">Восстановить</string>
+    <string name="repository_add_name_hint">Имя репозитория</string>
+    <string name="repository_add_url_hint">URL репозитория</string>
+    <string name="repository_add_title">Добавить репозиторий</string>
+    <string name="toast_repository_added">Добавлен репозиторий</string>
+    <string name="toast_repository_add_fail">Не удалось добавить хранилище</string>
+    <string name="toast_repository_remove_fail">Не удалось удалить хранилище!</string>
+    <string name="fragment_repositories_snackbar_repo_changed">Обновить репозитории?</string>
+    <string name="fragment_repositories_snackbar_repo_removed">Репозиторий удален.</string>
+    <string name="fragment_repositories_action_add">Добавить</string>
+    <string name="categories">Категории</string>
+    <string name="set_categories">Установить категории</string>
+    <string name="categories_add_name_hint">Название категории</string>
+    <string name="categories_add_title">Добавить категорию</string>
+    <string name="toast_categories_added">Категория добавлена</string>
+    <string name="toast_categories_add_fail">Не удалось добавить категорию</string>
+    <string name="toast_categories_remove_fail">Не удалось удалить категорию!</string>
+    <string name="toast_categories_move_fail">Не удалось переместить категорию</string>
+    <string name="fragment_categories_snackbar_repo_removed">Категория удалена.</string>
+    <string name="fragment_categories_action_add">Добавить</string>
+    <string name="alert_dialog_title_warn_categories_removal">Предупреждение об удалении категории</string>
+    <string name="alert_dialog_message_warn_categories_removal">Вы уверены, что хотите удалить эту категорию?</string>
+    <string name="text_alignment_start">Влево</string>
+    <string name="text_alignment_center">По центру</string>
+    <string name="text_alignment_justified">По ширине</string>
+    <string name="text_alignment_end">Вправо</string>
+    <string name="settings_reader_title_string_to_html">Преобразование строки в html</string>
+    <string name="settings_reader_desc_string_to_html">Все расширения, основанные на строках, отображаются как html</string>
+    <string name="settings_reader_title_horizontal_option">Горизонтальная навигация</string>
+    <string name="settings_reader_desc_horizontal_option">Проведите пальцем влево и вправо для перемещения между главами</string>
+	<string name="settings_reader_title_html_css">Html CSS</string>
+	<string name="settings_reader_desc_html_css">CSS внедряется в программу чтения html</string>
+	<string name="settings_reader_title_continous_scroll">Непрерывная прокрутка</string>
+	<string name="settings_reader_desc_continous_scroll">Плавная прокрутка между главами</string>
+	<string name="notification_channel_name_novel_update">Обновления новелл</string>
+	<string name="notification_channel_name_download">Скачать</string>
+	<string name="notification_channel_name_app_update">Обновление приложения</string>
+	<string name="notification_channel_name_backup">Резервное копирование и восстановление</string>
+	<string name="notification_channel_name_repository_update">Обновление репозитория</string>
+    <string name="empty_browse_message">Расширения отсутствуют, обновите эту страницу или проверьте свои репозитории</string>
+    <string name="empty_library_message">Если у вас нет новелл, перейдите в "Обзор" и добавьте несколько.</string>
+    <string name="empty_updates_message">Нет обновлений, проверьте некоторые\n(обновите или нажмите ниже)</string>
+    <string name="empty_downloads_message">Скачивания не ожидается, перейдите к скачиванию некоторых глав</string>
+    <string name="empty_repositories_message">У вас нет репозиториев, без них это приложение бесполезно</string>
+    <string name="empty_updates_refresh_action">Обновить</string>
+    <string name="empty_browse_refresh_action">Обновить</string>
+    <string name="empty_repositories_action">Добавить репозиторий</string>
+    <string name="fragment_catalogue_toast_background_add">Добавлено в библиотеку в фоновом режиме</string>
+    <string name="jump_to_chapter">Перейти к главе</string>
+    <string name="fragment_novel_jump_dialog_hint_chapter_number">Номер главы</string>
+    <string name="fragment_novel_jump_dialog_hint_chapter_title">Название главы</string>
+    <string name="alert_dialog_jump_positive">Перейти</string>
+    <string name="help">Помощь</string>
+    <string name="settings_advanced_verify_checksum_title">Проверить контрольную сумму расширения</string>
+    <string name="settings_advanced_verify_checksum_desc">Проверьте, совпадает ли содержимое расширения с контрольной суммой из индекса</string>
+    <string name="toast_error_repository_toggle_enabled_failed">Не удалось переключить включенное состояние хранилища</string>
+    <string name="toast_success_repository_toggled_enabled">Репозиторий был включен</string>
+    <string name="toast_success_repository_toggled_disabled">Репозиторий был отключен</string>
+    <string name="alert_dialog_title_warn_repo_removal">Предупреждение о снятии репо</string>
+    <string name="alert_dialog_message_warn_repo_removal">Вы уверены в удалении этого репозитория?</string>
+    <string name="double_back_message">Нажмите назад еще раз, чтобы выйти</string>
+    <string name="settings_advanced_require_double_back_title">Требовать подтверждение для выхода?</string>
+    <string name="settings_advanced_require_double_back_desc">Если включено, то для выхода из приложения пользователю потребуется выполнить действие "Назад" 2 раза.</string>
+    <string name="settings_reader_keep_screen_on">Держать экран включенным</string>
+    <string name="settings_reader_keep_screen_on_desc">Устройство для чтения глав будет держать экран включенным, пока он открыт</string>
+    <string name="toast_error_chapter_jump_invalid_target">Глава не найдена</string>
+    <string name="fragment_novel_jum_dialog_by_title">Поиск по названию главы</string>
+    <string name="toast_error_chapter_jump_invalid_number">Требуется номер главы</string>
+    <string name="toast_error_chapter_jump_empty_title">Необходимо название главы</string>
+    <string name="fragment_browse_option_Import">Импортировать новеллы</string>
+    <string name="fragment_repositories_action_repo_update">Обновить</string>
+    <string name="generic_undo">Отменить</string>
+    <string name="generic_question_retry">Повторить?</string>
+    <string name="fragment_repositories_snackbar_fail_undo_repo_removal">Не удалось отменить удаление репозитория</string>
+    <string name="generic_wifi_settings">Настройки Wi-Fi</string>
+    <string name="fragment_browse_snackbar_not_installed">Расширение не установлено</string>
+    <string name="fragment_browse_snackbar_offline_no_extension">Расширения нельзя использовать в автономном режиме</string>
+    <string name="fragment_browse_snackbar_offline_no_update_extension">Невозможность обновления в автономном режиме</string>
+    <string name="fragment_browse_snackbar_offline_no_install_extension">Невозможно установить в автономном режиме</string>
+    <string name="generic_error_cannot_update_library_offline">Новеллы нельзя обновлять в автономном режиме</string>
+    <string name="fragment_downloads_snackbar_offline_no_download">Невозможно загрузить в автономном режиме</string>
+    <string name="fragment_repositories_snackbar_offline_no_update">Невозможно обновить репозитории в автономном режиме</string>
+    <string name="notification_content_title_extension_download">Загрузчик расширений</string>
+    <string name="notification_content_text_extension_download">Загрузка %s</string>
+    <string name="notification_content_text_extension_installed">Установлено %s</string>
+    <string name="notification_content_text_extension_installed_failed">Не удалось установить %s</string>
+    <string name="notification_content_text_extension_load_error">Не удалось загрузить расширение из базы данных %d</string>
+    <string name="settings_reader_inverted_swipe_title">Инвертировать пролистывание главы</string>
+    <string name="settings_reader_inverted_swipe_desc">Инвертирование пролистывания глав при горизонтальном листании страниц</string>
+    <string name="settings_download_notify_extension_install_title">Уведомить о загрузке расширения</string>
+    <string name="settings_download_notify_extension_install_desc">Создайте уведомление, отображающее прогресс при загрузке/установке расширения.</string>
+    <string name="restore_notification_content_settings_restore">Восстановление настроек новеллы</string>
+    <string name="restore_notification_content_categories_restore">Восстановление категорий новелл</string>
+    <string name="fragment_novel_snackbar_cannot_inital_load_offline">Невозможно загрузить содержимое новеллы в автономном режиме</string>
+    <string name="fragment_novel_snackbar_finished_reading">Вы прочитали все главы.</string>
+    <string name="worker_title_download">Загрузчик глав</string>
+    <string name="fragment_settings_restart_worker">Перезапустите %s для применения новых настроек</string>
+    <string name="settings_update_header_repositories">Репозитории</string>
+    <string name="settings_update_header_novel">Новеллы</string>
+    <string name="settings_advanced_purge_button">ОЧИСТИТЬ</string>
+    <string name="fragment_settings_advanced_snackbar_purge_failure">Не удалось очистить</string>
+    <string name="fragment_settings_advanced_snackbar_purge_success">Очищенные новеллы без закладок</string>
+    <string name="worker_novel_update_load_failure">Не удалось обновить %s</string>
+    <string name="fragment_settings_advanced_snackbar_ui_change">Нажмите кнопку применить, чтобы изменить пользовательский интерфейс</string>
+    <string name="fragment_catalogue_toast_background_add_success">Добавлено \"%s\" в библиотеку</string>
+    <string name="jump_to_chapter_short">Перейти</string>
+    <string name="worker_novel_update_updated_novel">Новые главы доступны для \"%s\"</string>
+    <string name="worker_novel_updating_silent">Обновление новелл…</string>
+    <string name="activity_webview_null_url">URL для загрузки был нулевым, Извините!</string>
+    <string name="settings_reader_show_divider">Показать разделитель между главами</string>
+    <string name="settings_reader_show_divider_desc">Отображает страницу между главами, на которой указано, на какой главе вы находитесь и какая следующая.</string>
+    <string name="settings_reader_fullscreen">Полный экран</string>
+    <string name="settings_reader_fullscreen_desc">Полноэкранный режим скрывает системные панели при чтении</string>
+    <string name="settings_reader_fullscreen_focus">Сопоставить полноэкранный режим с фокусом</string>
+    <string name="settings_reader_fullscreen_focus_desc">Соответствие полноэкранного состояния режиму фокусировки читателя</string>
+	<string name="languages">Языки</string>
+    <string name="fragment_browse_filter_only_installed">Показать только установленные</string>
+	<string name="activity_main_backup_in_progress">Выполняется резервное копирование</string>
+	<string name="activity_main_backup_in_progress_warning">Пожалуйста, избегайте изменения данных</string>
+	<string name="settings_update_repo_disable_on_fail_title">Отключение при сбое</string>
+	<string name="settings_update_repo_disable_on_fail_desc">Отключите репозиторий, если он не обновляется, в основном для тестирования.</string>
+	<string name="settings_backup_export">Экспорт резервной копии</string>
+	<string name="export_backup_notification_subtext">Экспорт резервной копии</string>
+	<string name="export_backup_notification_content_starting">Экспорт начинается</string>
+	<string name="logo_desc">Это икона Monogatari</string>
+	<string name="settings_advanced_kill_cycle_workers_title">Убить рабочих цикла</string>
+	<string name="settings_advanced_kill_cycle_workers_desc">Убивает всех циклических рабочих, чтобы сбросить их.</string>
+	<string name="settings_advanced_snackbar_cycle_kill_success">Убиты циклические рабочие, Перезапустить?</string>
+	<string name="settings_advanced_cycle_start_success">Перезапуск циклических рабочих</string>
+	<string name="settings_update_novel_frequency_title">Частота обновления</string>
+	<string name="settings_update_novel_frequency_desc">Как часто запускать программа обновления новелл</string>
+	<string name="settings_update_novel_on_update_title">Загрузка при обновлении</string>
+	<string name="settings_update_novel_on_update_desc">Загружайте новые главы автоматически</string>
+	<string name="settings_update_novel_only_ongoing_title">Обновить только выпускаемые</string>
+	<string name="settings_update_novel_only_ongoing_desc">Обновляйте только те новеллы, которые продолжаются</string>
+	<string name="settings_update_novel_on_metered_title">Разрешить обновление при подключении по лимитному соединению.</string>
+	<string name="settings_update_novel_on_metered_desc">Если включено, позволяет обновлять новеллы, пока устройство находится на лимитном соединении.</string>
+	<string name="settings_update_novel_on_low_bat_title">Обновление при низком заряде батареи</string>
+	<string name="settings_update_novel_on_low_bat_desc">Если включено, позволяет обновлять новеллы при низком уровне заряда батареи устройства.</string>
+	<string name="settings_update_novel_on_low_sto_title">Разрешить обновление при низком объеме памяти</string>
+	<string name="settings_update_novel_on_low_sto_desc">Если включено, позволяет обновлять новеллы, когда на устройстве заканчивается место для хранения данных.</string>
+	<string name="settings_update_novel_only_idle_title">Обновление только в режиме ожидания</string>
+	<string name="settings_update_novel_only_idle_desc">Если флажок включен, новеллы будет обновляться только тогда, когда устройство находится в режиме ожидания</string>
+	<string name="settings_update_novel_notification_style_title">Стиль уведомления</string>
+	<string name="settings_update_novel_notification_style_desc">Меняет местами два стиля уведомлений. Проверьте их :D</string>
+	<string name="settings_update_novel_show_progress_title">Уведомить о ходе обновления</string>
+	<string name="settings_update_novel_show_progress_desc">Если этот параметр включен, вы не будете знать, какие новеллы обновляются</string>
+	<string name="settings_update_novel_classic_notification_title">Классическое завершение уведомления</string>
+	<string name="settings_update_novel_classic_notification_desc">Вместо того, чтобы показать вам, сколько глав в каждом новелле, он просто говорит \"Завершено обновление\".</string>
+	<string name="settings_update_novel_categories_update">Категории для обновления</string>
+	<string name="settings_update_novel_categories_download">Категории для загрузки</string>
+	<string name="settings_update_novel_categories_open">Открыть</string>
+	<string name="settings_update_novel_include_categories">Включить: %s</string>
+	<string name="settings_update_novel_exclude_categories">Исключить: %s</string>
+	<string name="settings_update_repo_on_metered_title">Разрешить обновление при подключении по лимитному соединению.</string>
+	<string name="settings_update_repo_on_low_bat_title">Обновление при низком заряде батареи</string>
+	<string name="settings_update_repo_on_low_sto_title">Обновление при нехватке памяти</string>
+	<string name="settings_update_repo_on_metered_desc">Если включено, позволяет обновлять хранилища, пока устройство находится на лимитном соединении.</string>
+	<string name="settings_update_repo_on_low_bat_desc">Если включено, позволяет обновлять репозитории при низком уровне заряда батареи устройства.</string>
+	<string name="settings_update_repo_on_low_sto_desc">Если флажок включен, это позволяет обновлять репозитории, когда на устройстве заканчивается место для хранения данных.</string>
+	<string name="restore_notification_content_novel_fail_parse">Не удалось проанализировать новеллу</string>
+	<string name="restore_notification_content_novel_fail_parse_http">Произошла ошибка HTTP, код: %s</string>
+	<string name="restore_notification_content_novel_fail_lua">Не удалось разобрать новеллу, lua: %s</string>
+    <string name="fragment_browse_filter_name_label">Имя расширения</string>
+	<string name="settings_view_legacy_nav_title">Используйте устаревшую навигацию</string>
+	<string name="settings_view_legacy_nav_desc">Используйте устаревшую навигацию по ящикам</string>
+	<string name="settings_reader_text_alignment_title">Выравнивание текста</string>
+	<string name="settings_reader_text_alignment_desc">Как текст выравнивается в программе чтения</string>
+	<string name="settings_reader_marking_mode_desc">Как главы помечаются как прочитанные</string>
+	<string name="settings_reader_resume_behavior_title">Возобновите сначала, не читая</string>
+	<string name="settings_reader_resume_behavior_desc">При нажатии на кнопку возобновления в представлении информации о новелле будет игнорироваться статус чтения, чтобы сначала открывать непрочитанное</string>
+	<string name="activity_css_export">Экспорт CSS</string>
+	<string name="activity_css_paste">Вставить буфер обмена</string>
+	<string name="activity_css_redo">Redo</string>
+	<string name="activity_css_undo">Отменить</string>
+	<string name="activity_css_save">Сохранить CSS</string>
+	<string name="activity_css_example"><![CDATA[<!DOCTYPE html>
+    <html>
+        <head>
+            <style>%s</style>
+        </head>
+        <body>
+            <h1>Заголовок 1</h1>
+            <h2>Заголовок 2</h2>
+            <h3>Заголовок 3</h3>
+            <h4>Заголовок 4</h4>
+            <h5>Заголовок 5</h5>
+            <h6>Заголовок 6</h6>
+            <blockquote>Блочная цитата</blockquote>
+            <dd>Описание</dd>
+            <div>Див</div>
+            <dl>
+                <dt>Элемент описания</dt>
+            </dl>
+            <hr>… Разрыв …</hr>
+            <ol>
+                <li>элемент упорядоченного списка</li>
+            </ol>
+            <ul>
+                <li>элемент неупорядоченного списка</li>
+            </ul>
+            <p>Абзац</p>
+            <pre>Предварительно отформатированный</pre>
+        </body>
+    </html>]]></string>
+    <string name="activity_main_app_update_download">Загрузка обновления приложения</string>
+    <string name="settings_advanced_clear_cookies_title">Очистить куки</string>
+    <string name="settings_advanced_clear_cookies_desc">Очистить все файлы cookie, которые Monogatari имеет для веб-сайтов.</string>
+    <string name="settings_advanced_clear_cookies_button">Очистить</string>
+    <string name="settings_advanced_clear_cookies_complete">Куки очищены</string>
+    <string name="settings_advanced_theme_desc">Измените тему, которую использует приложение</string>
+    <string name="settings_advanced_purge_novel_cache"><![CDATA[Удаляет все не отмеченные новеллы и информацию из Monogatari]]></string>
+    <string name="settings_advanced_kill_cycle_workers_button">Убить</string>
+    <string name="fragment_configure_extension_listing_desc">Какой список новелл должен отображаться, когда пользователь открывает расширение для просмотра</string>
+    <string name="fragment_downloads_set_all_pending_title">Установить все в ожидании</string>
+    <string name="fragment_downloads_delete_all_title">Удалить все</string>
+    <string name="fragment_novel_true_delete">Истинное удаление</string>
+    <string name="settings_advanced_true_chapter_delete_title">Показать истинное удаление глав</string>
+    <string name="settings_advanced_true_chapter_delete_desc">Появилась возможность по-настоящему удалить главу из Monogatari.\nПолезно, когда глава содержит ошибки</string>
+    <string name="toast_error_log_failed">Не удалось создать файл журнала, журналы не будут сохранены</string>
+    <string name="worker_backup_complete">Резервное копирование завершено</string>
+    <string name="fragment_browse_ext_icon_desc">Иконка расширения</string>
+    <string name="backup_restore_print_chapters_title">Печать названий глав при восстановлении</string>
+    <string name="backup_restore_print_chapters_desc">Печатать названия глав в журнал во время восстановления.\nПолезно для отладки, не полезно в других случаях.\nНеобходимо установить перед восстановлением.</string>
+    <string name="restore_notification_content_novel_fail_io">IOException: %s</string>
+    <string name="backup_only_modified_title">Резервное копирование только измененных</string>
+    <string name="backup_only_modified_desc">Резервное копирование только измененных глав, что позволяет экономить память и размер файла</string>
+    <string name="fragment_backup_error_unselected">Для экспорта не выбрана резервная копия</string>
+	<string name="export_backup_notification_missing_uri">Не предоставлен URI для экспорта резервной копии</string>
+	<string name="export_backup_notification_invalid_backup">Такой резервной копии не существует</string>
+	<string name="settings_advanced_log_title">Запись в файл</string>
+	<string name="settings_advanced_log_desc">Включение записи журналов в файл, но может привести к замедлению работы.\nТребуется перезагрузка</string>
+	<string name="update_to">Обновление: %s</string>
+    <string name="download_chapter_updates_desc">Скачать главы, которые были недавно добавлены в Обновления</string>
+    <string name="input_int_range_desc">Пожалуйста, введите целое число в диапазоне от %1$d до %2$d (включительно)</string>
+    <string name="input_float">Входной поплавок</string>
+    <string name="input_float_range_desc">Пожалуйста, введите число с плавающей запятой в диапазоне от %1$d до %2$d (включительно).</string>
+    <string name="style_add">Добавить стиль в Monogatari</string>
+    <string name="style_wait">Таблицы стилей скоро появятся</string>
+    <string name="styles">Стили</string>
+    <string name="qr_code_scan">Добавить ссылку на общий доступ</string>
+    <string name="menu_share_url">Основной URL</string>
+    <string name="menu_share_qr">QR-код</string>
+    <string name="fragment_add_following">Будет добавлено следующее</string>
+    <string name="fragment_add_extension">Расширение</string>
+    <string name="fragment_add_repository">Репозиторий</string>
+    <string name="fragment_add_novel">Новелла</string>
+    <string name="fragment_add_invalid">Неверный код URL</string>
+    <string name="fragment_add_present_novel">Эта новелла уже присутствует %s</string>
+    <string name="fragment_add_present_style">Этот стиль уже присутствует: %s</string>
+    <string name="fragment_add_present_ext">Это расширение уже присутствует: %s</string>
+    <string name="fragment_add_present_repo">Этот репозиторий уже присутствует: %s</string>
+    <string name="fragment_add_open_novel">Открыть новеллу</string>
+    <string name="settings_advanced_auto_bookmark_title">Закладка из QR</string>
+    <string name="settings_advanced_auto_bookmark_desc">Автоматическое добавление в закладки новеллы, отсканированных с помощью QR-кода.</string>
+    <string name="reader_last_chapter">Предыдущая глава:</string>
+    <string name="reader_next_chapter">Следующая глава:</string>
+    <string name="fragment_library_menu_tri_by_title">По названию</string>
+    <string name="fragment_library_menu_tri_by_unread">По количеству непрочитанных глав</string>
+    <string name="fragment_library_menu_tri_by_id">По идентификатору новеллы</string>
+    <string name="fragment_library_menu_tri_by_source">По источнику</string>
+    <string name="fragment_library_menu_tri_by_date">По дате</string>
+    <string name="fragment_novel_info_image">Иллюстрация к новелле</string>
+    <string name="action_open_in_webview">Открыть в веб-просмотре</string>
+    <string name="reader_first_focus">Нажмите на содержимое, чтобы расфокусировать его.</string>
+    <string name="reader_first_focus_dismiss">Отклонить</string>
+    <string name="fragment_catalogue_toast_background_add_fail">Не удалось добавить: %s</string>
+    <string name="fragment_catalogue_error_base_url">Ошибка при получении URL для расширения: %s</string>
+    <string name="fragment_catalogue_error_name">Ошибка при получении имени расширения: %s</string>
+    <string name="fragment_catalogue_error_has_search">Ошибка при проверке наличия поиска в расширении: %s</string>
+    <string name="report">Отчет</string>
+    <string name="activity_main_error_theme">Ошибка при сборе темы приложения: %s</string>
+    <string name="activity_main_error_update_check">Ошибка при запуске обновления приложения: %s</string>
+    <string name="activity_main_error_handle_update">Ошибка при обработке обновления приложения: %s</string>
+    <string name="fragment_novel_error_url">Ошибка при получении url новеллы: %s</string>
+    <string name="fragment_novel_error_load">Ошибка при загрузке новеллы: %s</string>
+    <string name="fragment_novel_error_load_chapters">Ошибка при получении глав: %s</string>
+    <string name="fragment_novel_error_share">Ошибка при получении ресурса: %s</string>
+    <string name="fragment_novel_error_true_delete">Ошибка при проверке истинного удаления: %s</string>
+    <string name="worker_export_backup_null_resolver">Разрешитель нулевого содержимого при попытке записи резервной копии</string>
+    <string name="worker_export_backup_file_missing">Как может отсутствовать файл экспорта</string>
+    <string name="worker_export_backup_missing_perm">Отсутствие разрешений на запись резервной копии</string>
+    <string name="worker_extension_install_error_http">Ошибка HTTP</string>
+    <string name="worker_extension_install_error_lua">Некорректное расширение?</string>
+    <string name="worker_extension_install_error_sql">Ошибка SQL при установке расширения</string>
+    <string name="worker_extension_install_error_perm">Ошибка разрешения файла</string>
+    <string name="worker_extension_install_error_io">IOException</string>
+    <string name="worker_extension_install_error_get_sql">Ошибка SQL при получении расширения</string>
+    <string name="less">Меньше</string>
+    <string name="fragment_novel_selected_download">Скачать избранные главы</string>
+    <string name="fragment_novel_selected_delete">Удаление выбранных глав из хранилища</string>
+    <string name="fragment_novel_selected_read">Пометить выбранные главы как прочитанные</string>
+    <string name="fragment_novel_selected_unread">Пометить выбранные главы как непрочитанные</string>
+    <string name="fragment_novel_selected_bookmark">Добавьте выбранные главы в закладки</string>
+    <string name="fragment_novel_selected_unbookmark">Снять закладки с выбранных глав</string>
+    <string name="settings_reader_double_tap">Двойное нажатие для переключения фокуса</string>
+    <string name="settings_reader_double_tap_desc">Вместо одинарного касания требуется двойное касание для переключения фокуса в ридере.</string>
+    <string name="settings_reader_double_tap_system">Двойное нажатие для переключения системного пользовательского интерфейса</string>
+    <string name="settings_reader_double_tap_system_desc">Двойным нажатием можно переключить системный пользовательский интерфейс в читалке.\nНе работает двойное нажатие для переключения фокуса.</string>
+    <string name="fragment_novel_info_open_web_text">Веб-просмотр</string>
+    <string name="fragment_catalogue_no_more">Больше нет контента, извините!</string>
+    <string name="fragment_repositories_action_remove">Удалить репозиторий</string>
+    <string name="backup_restore_low_storage">Резервное копирование при малом объеме памяти</string>
+    <string name="backup_restore_low_storage_desc">Позволяет выполнять резервное копирование при низком объеме памяти, также влияет на рабочий цикл</string>
+    <string name="backup_restore_low_battery">Резервное копирование при низком заряде батареи</string>
+    <string name="backup_restore_low_battery_desc">Позволяет выполнять резервное копирование при разряженной батарее, также влияет на рабочий цикл</string>
+    <string name="backup_restore_only_idle">Резервное копирование только в режиме ожидания</string>
+    <string name="backup_restore_only_idle_desc">Заставляет создавать резервные копии, когда устройство простаивает, также влияет на рабочий цикл.</string>
+    <string name="cozy">Удобная сетка</string>
+    <string name="settings_advanced_force_repo_update_title">Принудительная синхронизация репо</string>
+    <string name="settings_advanced_force_repo_update_desc">Иногда синхронизация репо не загружается должным образом. Это заставит репо обновиться.</string>
+    <string name="force">Применить</string>
+    <string name="fragment_novel_delete_previous_fail">Не удалось удалить предыдущую главу: %s</string>
+	<string name="missing_extension">Расширение отсутствует %i</string>
+	<string name="fragment_about_acra_id">Идентификация ACRA</string>
+	<string name="intro_acra">Включить отчет об ошибках</string>
+	<string name="intro_acra_desc">Включить отправку отчетов об ошибках в MonogatariOrg\nЕсли этот параметр включен, MonogatariOrg будет собирать журналы сбоев, содержащие информацию об устройстве и состоянии приложения во время сбоя.</string>
+	<string name="settings_advanced_enable_acra">Включить отчет об ошибках в MonogatariOrg\nТребуется перезапуск приложения</string>
+	<string name="intro_page_next">Переход на следующую страницу</string>
+	<string name="intro_license_desc_new">В юридических целях, пожалуйста, внимательно прочитайте всю нижеследующую лицензию, чтобы понять свои права.</string>
+	<string name="intro_perm_notif_desc">Monogatari использует уведомления для многих текущих задач, таких как обновления и резервное копирование.</string>
+	<string name="intro_perm_none">Хорошие новости, Monogatari не требует разрешений!</string>
+	<string name="intro_what_is_app_desc_new">"Monogatari - это приложение с открытым исходным кодом для чтения новелл.\nОднако только с Monogatari у вас есть все возможности для чтения новелл в одном месте."</string>
+	<string name="intro_close">Закрыть введение</string>
+	<string name="settings_backup_cycle_desc">Как часто следует автоматически создавать резервные копии</string>
+	<string name="settings_backup_cycle_title">Частота резервного копирования</string>
+    <string name="fragment_repositories_add_error">Неверный URL</string>
+	<string name="categories_empty">Здесь нет категорий, добавьте одну!</string>
+	<string name="settings_reader_table_hack_title">Включить взлом таблицы</string>
+	<string name="settings_reader_table_hack_desc">Принудительное включение полосы прокрутки для таблиц с переполнениями. Включение этой функции может нарушить функциональность доступности.</string>
+	<string-array name="marking_names">
+		<item>При просмотре страницы</item>
+		<item>При прокрутке страницы</item>
+	</string-array>
+	<plurals name="toast_unread_count">
+		<item quantity="one">%d непрочитанная глава.</item>
+		<item quantity="zero">Нет непрочитанных глав.</item>
+		<item quantity="other">%d непрочитанных глав.</item>
+	</plurals>
+    <plurals name="fragment_novel_toggle_delete_chapters">
+        <item quantity="one">Удалить %d главу?</item>
+        <item quantity="other">Удалить %d глав?</item>
+    </plurals>
+	<plurals name="worker_novel_update_updated_novel_count">
+		<item quantity="one">%d новая глава.</item>
+		<item quantity="zero">Нет новых глав.</item>
+		<item quantity="other">%d новых глав.</item>
+	</plurals>
+	<array name="text_alignments">
+		<item>@string/text_alignment_start</item>
+		<item>@string/text_alignment_center</item>
+		<item>@string/text_alignment_justified</item>
+		<item>@string/text_alignment_end</item>
+	</array>
+	<array name="application_themes">
+        <item>@string/follow_system_theme</item>
+        <item>@string/light</item>
+        <item>@string/dark</item>
+        <item>@string/emerald_manuscript_theme</item>
+        <item>@string/midnight_ink_gold_theme</item>
+    </array>
+	<array name="novel_card_types">
+		<item>@string/normal</item>
+		<item>@string/compressed</item>
+		<item>@string/comfy</item>
+	</array>
+</resources>

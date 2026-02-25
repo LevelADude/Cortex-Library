@@ -1,0 +1,892 @@
+<resources>
+    <string name="app_name">Monogatari</string>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="website">Website</string>
+    <string name="about_link_website_desc">Official Monogatari website</string>
+    <string name="about_link_source_desc">Monogatari source code repository</string>
+    <string name="about_link_extensions_desc">Monogatari extension index repository</string>
+    <string name="about_link_matrix_desc">Monogatari community on Matrix</string>
+    <string name="about_link_discord_desc">Monogatari community on Discord</string>
+    <string name="about_link_disclaimer_desc">Read the Monogatari content disclaimer</string>
+
+    <string name="github" translatable="false">Gitlab</string>
+
+    <string name="matrix" translatable="false">Matrix</string>
+    <string name="discord" translatable="false">Discord</string>
+
+    <string name="header_text">Novel reading right on your phone!</string>
+    <string name="todo">TODO</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+
+    <!-- View Titles -->
+    <string name="library">Library</string>
+    <string name="updates">Updates</string>
+    <string name="extensions">Extensions</string>
+    <string name="downloads">Downloads</string>
+    <string name="settings">Settings</string>
+    <string name="settings_download">Settings > Download</string>
+    <string name="settings_update">Settings > Update</string>
+    <string name="settings_view">Settings > View</string>
+    <string name="settings_reader">Settings > Reader</string>
+    <string name="settings_advanced">Settings > Advanced</string>
+    <string name="fragment_backup_title">Backup</string>
+
+
+    <!-- Reader Settings -->
+    <string name="text_size">Text size</string>
+    <string name="paragraph_spacing">Paragraph spacing</string>
+    <string name="paragraph_indent">Paragraph indent</string>
+
+    <string name="novel_author">Author(s): </string>
+    <string name="download">Download</string>
+    <string name="fragment_novel_chapter_position">Position:</string>
+    <string name="backup_now">Backup Now</string>
+    <string name="pending">Pending</string>
+    <string name="downloaded">Downloaded</string>
+
+    <string name="none">None</string>
+
+    <string name="select_all">Select All</string>
+    <string name="deselect_all">Deselect All</string>
+    <string name="retry">Retry</string>
+    <string name="read">Read</string>
+    <string name="unread">Unread</string>
+
+    <string name="reader_pitch">TTS Pitch</string>
+    <string name="reader_speed">TTS Speed</string>
+
+    <!-- Migration View -->
+
+    <!-- Settings Info -->
+    <string name="version">Version</string>
+    <string name="report_bug">Report bug</string>
+    <string name="disclaimer">Disclaimer</string>
+    <string name="license">License</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="theme">Theme:</string>
+    <string name="select_between">Select between</string>
+    <string name="remove">Remove</string>
+    <string name="update_now">Update now</string>
+    <string name="migrate_sources">Migrate sources</string>
+    <string name="selection">Selection</string>
+    <string name="migrate_source">Migrate source</string>
+    <string name="artist_s">Artist(s): </string>
+
+    <string name="marking_mode">Marking Method</string>
+
+    <string-array name="marking_names">
+        <item>On View Selected</item>
+        <item>On View Scrolled</item>
+    </string-array>
+
+
+    <!-- Publishing status-->
+    <string name="paused">Paused</string>
+    <string name="completed">Completed</string>
+    <string name="publishing">Publishing</string>
+    <string name="unknown">Unknown</string>
+    <string name="restore_now">Restore now</string>
+
+
+    <!-- Backup and restore -->
+    <string name="settings_reader_tap_to_scroll_title">Tap to scroll</string>
+    <string name="open_in_browser">Open in browser</string>
+    <string name="open_in">Open in</string>
+    <string name="reader">Reader</string>
+    <string name="default_reader">Default</string>
+
+    <plurals name="toast_unread_count">
+        <item quantity="one">%d unread chapter.</item>
+        <item quantity="zero">No unread chapters.</item>
+        <item quantity="other">%d chapters unread.</item>
+    </plurals>
+
+    <string name="remove_novel_cache">Remove Novel Cache</string>
+
+
+    <string name="action_webview_back">Back</string>
+    <string name="action_webview_forward">Forward</string>
+    <string name="action_webview_refresh">Refresh</string>
+
+
+    <!-- App Update -->
+    <string name="notification_app_update_check">App Update Check</string>
+    <string name="notification_app_update_available_version">%s update available</string>
+
+    <string name="notification_app_update_install_title">App Update Install</string>
+    <string name="notification_app_update_loading">Loading app update</string>
+    <string name="notification_app_update_downloading">Downloading app update</string>
+    <string name="notification_app_update_install">Install app update</string>
+
+
+    <string name="update_app_now_question">Update app now?</string>
+    <string name="update_not_interested">Huh, not interested</string>
+
+    <!-- Theme -->
+    <string name="light">Light</string>
+    <string name="sepia">Sepia</string>
+    <string name="dark">Dark</string>
+    <string name="light_dark">Gray</string>
+    <string name="custom">Custom</string>
+
+    <!-- Shortcuts -->
+    <string name="action_global_search_hint">Global search…</string>
+
+    <!-- Download options -->
+    <string name="download_next_chapter">Download next chapter</string>
+    <string name="download_next_5_chapters">Download next 5 chapters</string>
+    <string name="download_next_10_chapters">Download next 10 chapters</string>
+    <string name="download_custom_chapters">Download custom</string>
+
+
+    <string name="update_complete">Completed Update</string>
+    <string name="you_not_online">You are not online</string>
+    <string name="download_chapter_updates">Download chapter updates</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="install">Install</string>
+    <string name="update">Update</string>
+    <string name="chapters">Chapters</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="view">View</string>
+    <string name="advanced">Advanced</string>
+    <string name="backup">Backup</string>
+    <string name="loading">Loading…</string>
+    <string name="amoled">Amoled</string>
+    <string name="crashCommentPromt">Crash Report</string>
+    <string name="crashDialogText">The application has crashed. Send a report to the developers?</string>
+    <string name="columns_of_novel_listing_p">Columns of novels in portrait mode</string>
+    <string name="columns_of_novel_listing_h">Columns of novels in landscape mode</string>
+    <string name="columns_zero_automatic">0 means automatic</string>
+
+    <string name="normal">Normal</string>
+    <string name="compressed">Compressed</string>
+    <string name="expanded">Expanded</string>
+    <string name="comfy">Comfy</string>
+    <string name="novel_card_type_selector_title">Novel card type</string>
+    <string name="novel_card_type_selector_desc">Swap between a grid or list for displaying novels</string>
+    <string name="novel_badge_toast_title">Novel badge toast</string>
+    <string name="novel_badge_toast_desc">Toast when the unread badge is clicked to explain what it is for</string>
+    <string name="apply">Apply</string>
+    <string name="reset">Reset</string>
+    <string name="listings">Listings</string>
+    <string name="updating">Updating</string>
+
+    <!-- Introduction -->
+
+    <string name="intro_title_greet">Welcome to Monogatari!</string>
+    <string name="intro_what_is_app">What is Monogatari?</string>
+    <string name="intro_perm_title">Permissions</string>
+    <string name="intro_happy_end">Wonderful!</string>
+    <string name="intro_happy_end_desc">That\'s it for an intro, Read well!</string>
+    <string name="skip_label">Skip</string>
+
+
+    <string name="backup_settings_option">Backup Settings?</string>
+    <string name="backup_chapters_option">Backup Chapters?</string>
+    <string name="backup_chapters_option_description">Default on, off will not save your progress</string>
+    <string name="backup_settings_option_desc">Default is off, which will not save your settings</string>
+
+    <string name="regret">This feature have not been reintroduced yet due to time constraints :(</string>
+    <string name="installing">Installing</string>
+    <string name="delete">Delete</string>
+    <string name="pause">Pause</string>
+    <string name="start">Start</string>
+    <string name="extension_image_desc">Image of this extension</string>
+    <string name="share">Share</string>
+    <string name="browse">Browse</string>
+    <string name="more">More</string>
+    <string name="restart">Restart</string>
+    <string name="need_restart">Activity needs to restart</string>
+    <string name="never_mind">Nevermind</string>
+    <string name="fragment_novel_in_library">In library</string>
+    <string name="fragment_novel_add_to_library">Add to library</string>
+    <string name="obsolete_extension">Obsolete extension! Please uninstall.</string>
+    <string name="id_label">ID:</string>
+    <string name="repositories">Repositories</string>
+    <string name="settings_reader_volume_scroll_title">Volume Scroll</string>
+    <string name="all">All</string>
+    <string name="about">About</string>
+    <string name="check_for_app_update">Check for app update</string>
+    <string name="source_licenses">Source Licenses</string>
+    <string name="inverse_selection">Inverse Selection</string>
+    <string name="downloading">Downloading</string>
+    <string name="error">Error</string>
+    <string name="resume">Resume</string>
+    <string name="waiting">Waiting</string>
+    <string name="settings_reader_title_mark_read_as_reading">Mark read as reading</string>
+    <string name="settings_reader_desc_mark_read_as_reading">Allows the reader to mark a read chapter as reading when its opened up.</string>
+    <string name="no_more_chapters">No more chapters</string>
+
+    <string name="follow_system_theme">Follow system</string>
+    <string name="emerald_manuscript_theme">Emerald Manuscript</string>
+    <string name="midnight_ink_gold_theme">Midnight Ink (Gold)</string>
+    <string name="sort">Sort</string>
+    <string name="bookmarked">Bookmarked</string>
+    <string name="genres">Genres</string>
+    <string name="tags">Tags</string>
+    <string name="authors">Authors</string>
+    <string name="artists">Artists</string>
+    <string name="unread_status">Unread status</string>
+    <string name="update_novel">Novel Updater</string>
+    <string name="settings_backup_alert_select_location_title">Select location</string>
+    <string name="settings_backup_alert_select_backup_title">Select backup</string>
+    <string name="fragment_backup_settings_label">Backup Settings</string>
+    <string name="settings_backup_alert_location_external">External</string>
+    <string name="settings_backup_alert_location_internal">Internal</string>
+    <string name="restore_notification_content_text_outdated">Backup is outdated</string>
+    <string name="restore_notification_content_missing_key">Backup does not contain \‘version\’ key</string>
+    <string name="restore_notification_content_decoding_string">Decoding</string>
+    <string name="restore_notification_content_unzipping_bytes">Unzipping</string>
+    <string name="restore_notification_content_unexpected_empty">Received empty, should not happen</string>
+    <string name="restore_notification_content_starting">Starting restore</string>
+    <string name="restore_notification_title_adding_repos">Adding repositories</string>
+    <string name="restore_notification_content_novel_load">Loading novel data</string>
+    <string name="restore_notification_content_novel_save">Saving novel data</string>
+    <string name="restore_notification_content_novel_chapters_save">Saving novel chapters</string>
+    <string name="restore_notification_content_chapters_load">Loading chapters from database</string>
+    <string name="restore_notification_content_completed">Completed!</string>
+    <string name="restore_notification_subtitle">Restore</string>
+    <string name="repository_add_name_hint">Repository name</string>
+    <string name="repository_add_url_hint">Repository URL</string>
+    <string name="repository_add_title">Add Repository</string>
+    <string name="toast_repository_added">Repository Added</string>
+    <string name="toast_repository_add_fail">Failed to add repository</string>
+    <string name="toast_repository_remove_fail">Failed to remove repository!</string>
+    <string name="fragment_repositories_snackbar_repo_changed">Refresh the repositories?</string>
+    <string name="fragment_repositories_snackbar_repo_removed">Repository removed.</string>
+    <string name="fragment_repositories_action_add">Add</string>
+
+    <string name="categories">Categories</string>
+    <string name="set_categories">Set categories</string>
+    <string name="categories_add_name_hint">Category name</string>
+    <string name="categories_add_title">Add Category</string>
+    <string name="toast_categories_added">Category Added</string>
+    <string name="toast_categories_add_fail">Failed to add category</string>
+    <string name="toast_categories_remove_fail">Failed to remove category!</string>
+    <string name="toast_categories_move_fail">Failed to move category</string>
+    <string name="fragment_categories_snackbar_repo_removed">Category removed.</string>
+    <string name="fragment_categories_action_add">Add</string>
+    <string name="alert_dialog_title_warn_categories_removal">Category Removal Warning</string>
+    <string name="alert_dialog_message_warn_categories_removal">Are you sure about removing this category?</string>
+
+
+    <string name="text_alignment_start">Start</string>
+    <string name="text_alignment_center">Center</string>
+    <string name="text_alignment_justified">Justified</string>
+    <string name="text_alignment_end">End</string>
+
+
+    <string name="settings_reader_title_string_to_html">Convert string to html</string>
+    <string name="settings_reader_desc_string_to_html">All string based extensions are rendered as html</string>
+    <string name="settings_reader_title_horizontal_option">Horizontal paging</string>
+    <string name="settings_reader_desc_horizontal_option">Swipe left and right to move between chapters</string>
+    <string name="settings_reader_title_html_css">Html CSS</string>
+    <string name="settings_reader_desc_html_css">CSS injected into html reader</string>
+    <string name="settings_reader_title_continous_scroll">Continuous scroll</string>
+    <string name="settings_reader_desc_continous_scroll">Smoothly scroll between chapters</string>
+
+    <!-- Notification channel names -->
+    <string name="notification_channel_name_novel_update">Novel Updates</string>
+    <string name="notification_channel_name_download">Download</string>
+    <string name="notification_channel_name_app_update">App Update</string>
+    <string name="notification_channel_name_backup">Backup and Restore</string>
+    <string name="notification_channel_name_repository_update">Repository Update</string>
+
+    <!-- Empty View Messages -->
+    <string name="empty_browse_message">There are no extensions, Refresh this page or check your repositories</string>
+    <string name="empty_library_message">You don\'t have any novels, Go to “Browse” and add some</string>
+    <string name="empty_updates_message">No updates, Lets check for some\n(Refresh or press below)</string>
+    <string name="empty_downloads_message">No downloads pending, Go download some chapters</string>
+    <string name="empty_repositories_message">You have no repositories, This app is useless without them</string>
+
+    <!-- Empty View Actions -->
+    <string name="empty_updates_refresh_action">Refresh</string>
+    <string name="empty_browse_refresh_action">Refresh</string>
+    <string name="empty_repositories_action">Add Repository</string>
+
+
+    <string name="fragment_catalogue_toast_background_add">Adding to library in background</string>
+    <string name="jump_to_chapter">Jump to Chapter</string>
+    <string name="fragment_novel_jump_dialog_hint_chapter_number">Chapter Number</string>
+    <string name="fragment_novel_jump_dialog_hint_chapter_title">Chapter Title</string>
+    <string name="alert_dialog_jump_positive">Jump</string>
+    <string name="help">Help</string>
+    <string name="settings_advanced_verify_checksum_title">Verify extension check sum</string>
+    <string name="settings_advanced_verify_checksum_desc">Verify if the extension content matches the checksum from the index</string>
+    <string name="toast_error_repository_toggle_enabled_failed">Failed to toggle enabled state of repository</string>
+    <string name="toast_success_repository_toggled_enabled">Repository has been enabled</string>
+    <string name="toast_success_repository_toggled_disabled">Repository has been disabled</string>
+    <string name="alert_dialog_title_warn_repo_removal">Repo Removal Warning</string>
+    <string name="alert_dialog_message_warn_repo_removal">Are you sure about removing this repository?</string>
+    <string name="double_back_message">Click back again to exit</string>
+    <string name="settings_advanced_require_double_back_title">Require double back to exit</string>
+    <string name="settings_advanced_require_double_back_desc">If enabled, will require the user to do the back action 2x to leave the app</string>
+
+    <string name="settings_reader_keep_screen_on">Keep screen on</string>
+    <string name="settings_reader_keep_screen_on_desc">The chapter reader will keep the screen on while open</string>
+    <string name="toast_error_chapter_jump_invalid_target">No chapter found</string>
+    <string name="fragment_novel_jum_dialog_by_title">Search by chapter title</string>
+
+    <string name="toast_error_chapter_jump_invalid_number">Chapter number required</string>
+    <string name="toast_error_chapter_jump_empty_title">Chapter title needed</string>
+    <string name="fragment_browse_option_Import">Import Novel</string>
+    <string name="fragment_repositories_action_repo_update">Refresh</string>
+    <string name="generic_undo">Undo</string>
+    <string name="generic_question_retry">Retry?</string>
+    <string name="fragment_repositories_snackbar_fail_undo_repo_removal">Failed to undo repository removal</string>
+    <string name="generic_wifi_settings">Wi-Fi Settings</string>
+    <string name="fragment_browse_snackbar_not_installed">Extension is not installed</string>
+    <string name="fragment_browse_snackbar_offline_no_extension">Extensions cannot be used offline</string>
+    <string name="fragment_browse_snackbar_offline_no_update_extension">Cannot update when offline</string>
+    <string name="fragment_browse_snackbar_offline_no_install_extension">Cannot install when offline</string>
+    <string name="generic_error_cannot_update_library_offline">Novels cannot be updated offline</string>
+    <string name="fragment_downloads_snackbar_offline_no_download">Cannot download when offline</string>
+    <string name="fragment_repositories_snackbar_offline_no_update">Cannot update repositories offline</string>
+    <string name="notification_content_title_extension_download">Extension Downloader</string>
+
+    <string name="notification_content_text_extension_download">Downloading %s</string>
+    <string name="notification_content_text_extension_installed">Installed %s</string>
+    <string name="notification_content_text_extension_installed_failed">Failed to install %s</string>
+    <string name="notification_content_text_extension_load_error">Failed to load extension from db %d</string>
+
+    <string name="settings_reader_inverted_swipe_title">Invert chapter swipe</string>
+    <string name="settings_reader_inverted_swipe_desc">Invert the chapter swipe when horizontally paging</string>
+    <string name="settings_download_notify_extension_install_title">Notify extension downloading</string>
+    <string name="settings_download_notify_extension_install_desc">Create a notification displaying progress when an extension is being downloaded/installed.</string>
+    <string name="restore_notification_content_settings_restore">Restore novel settings</string>
+    <string name="restore_notification_content_categories_restore">Restore novel categories</string>
+    <string name="fragment_novel_snackbar_cannot_inital_load_offline">Cannot load novel content while offline</string>
+    <string name="fragment_novel_snackbar_finished_reading">You have read all the chapters.</string>
+    <string name="worker_title_download">Chapter Downloader</string>
+    <string name="fragment_settings_restart_worker">Restart %s to apply new settings</string>
+    <string name="settings_update_header_repositories">Repositories</string>
+    <string name="settings_update_header_novel">Novels</string>
+    <string name="settings_advanced_purge_button">PURGE</string>
+    <string name="fragment_settings_advanced_snackbar_purge_failure">Failed to purge</string>
+    <string name="fragment_settings_advanced_snackbar_purge_success">Purged unbookmarked novels</string>
+    <string name="worker_novel_update_load_failure">Failed to update %s</string>
+    <string name="fragment_settings_advanced_snackbar_ui_change">Press apply to change the UI</string>
+    <string name="fragment_catalogue_toast_background_add_success">Added \“%s\” to Library</string>
+    <string name="jump_to_chapter_short">Jump</string>
+    <string name="worker_novel_update_updated_novel">New chapters available for \“%s\”</string>
+    <string name="worker_novel_updating_silent">Updating novels…</string>
+    <string name="activity_webview_null_url">URL to load was null, Sorry!</string>
+    <string name="settings_reader_show_divider">Show divider between chapters</string>
+    <string name="settings_reader_show_divider_desc">Displays a page between chapters telling you which chapter you are on, and what is the next one</string>
+    <string name="settings_reader_fullscreen">Fullscreen</string>
+    <string name="settings_reader_fullscreen_desc">Fullscreen mode hides system bars when reading</string>
+    <string name="settings_reader_fullscreen_focus">Match fullscreen to focus</string>
+    <string name="settings_reader_fullscreen_focus_desc">Match the fullscreen state to the reader focus mode</string>
+    <string name="languages">Languages</string>
+    <string name="fragment_browse_filter_only_installed">Show only installed</string>
+    <string name="activity_main_backup_in_progress">Backup in progress</string>
+    <string name="activity_main_backup_in_progress_warning">Please avoid changing data</string>
+    <string name="settings_update_repo_disable_on_fail_title">Disable on fail</string>
+    <string name="settings_update_repo_disable_on_fail_desc">Disable a repository if it fails to update, mostly for testing.</string>
+    <string name="settings_backup_export">Export backup</string>
+    <string name="export_backup_notification_subtext">Export Backup</string>
+    <string name="export_backup_notification_content_starting">Export Starting</string>
+    <string name="logo_desc">This is the icon of Monogatari</string>
+    <string name="settings_advanced_kill_cycle_workers_title">Kill Cycle Workers</string>
+    <string name="settings_advanced_kill_cycle_workers_desc">Kill all cyclic workers to reset them.</string>
+    <string name="settings_advanced_snackbar_cycle_kill_success">Killed cyclic workers, Restart?</string>
+    <string name="settings_advanced_cycle_start_success">Restarted cyclic workers</string>
+    <string name="settings_update_novel_frequency_title">Update Frequency</string>
+    <string name="settings_update_novel_frequency_desc">How often does the novel updater run</string>
+    <string name="settings_update_novel_on_update_title">Download on update</string>
+    <string name="settings_update_novel_only_ongoing_title">Only update ongoing</string>
+    <string name="settings_update_novel_on_update_desc">Download new chapters automatically</string>
+    <string name="settings_update_novel_only_ongoing_desc">Only update novels that are ongoing</string>
+    <string name="settings_update_novel_on_metered_title">Allow updating on metered connection</string>
+    <string name="settings_update_novel_on_metered_desc">If toggled on, Allows novels to update while the device is on a metered connection</string>
+    <string name="settings_update_novel_on_low_bat_title">Update on low battery</string>
+    <string name="settings_update_novel_on_low_bat_desc">If toggled on, Allows novels to update while the device has a low battery level</string>
+    <string name="settings_update_novel_on_low_sto_title">Allow updating on low storage</string>
+    <string name="settings_update_novel_on_low_sto_desc">If toggled on, Allows novels to update while the device is running out of storage space</string>
+    <string name="settings_update_novel_only_idle_title">Update only when idle</string>
+    <string name="settings_update_novel_only_idle_desc">If toggled on, Novels will only update when the device is idle</string>
+    <string name="settings_update_novel_notification_style_title">Notification Style</string>
+    <string name="settings_update_novel_notification_style_desc">Swaps between two stypes of notifications. Check them out :D</string>
+    <string name="settings_update_novel_show_progress_title">Notify update progress</string>
+    <string name="settings_update_novel_show_progress_desc">If toggled on, You will have no idea what novels are being updated</string>
+    <string name="settings_update_novel_classic_notification_title">Classic notification completion</string>
+    <string name="settings_update_novel_classic_notification_desc">Instead of showing you which how many chapters are in each novel, simply says \“Completed Update\”</string>
+    <string name="settings_update_novel_categories_update">Categories to update</string>
+    <string name="settings_update_novel_categories_download">Categories to download</string>
+    <string name="settings_update_novel_categories_open">Open</string>
+    <string name="settings_update_novel_include_categories">Include: %s</string>
+    <string name="settings_update_novel_exclude_categories">Exclude: %s</string>
+    <string name="settings_update_repo_on_metered_title">Allow updating on metered connection</string>
+    <string name="settings_update_repo_on_low_bat_title">Update on low battery</string>
+    <string name="settings_update_repo_on_low_sto_title">Update on low storage</string>
+    <string name="settings_update_repo_on_metered_desc">If toggled on, Allows Repositories to update while the device is on a metered connection</string>
+    <string name="settings_update_repo_on_low_bat_desc">If toggled on, Allows Repositories to update while the device has a low battery level</string>
+    <string name="settings_update_repo_on_low_sto_desc">If toggled on, allows Repositories to update while the device is running out of storage space</string>
+    <string name="restore_notification_content_novel_fail_parse">Failed to parse novel</string>
+    <string name="restore_notification_content_novel_fail_parse_http">HTTP error occurred, code: %s</string>
+    <string name="restore_notification_content_novel_fail_lua">Failed to parse novel, lua: %s</string>
+    <string name="fragment_browse_filter_name_label">Extension Name</string>
+    <string name="settings_view_legacy_nav_title">Use legacy navigation</string>
+    <string name="settings_view_legacy_nav_desc">Use legacy drawer navigation</string>
+    <string name="settings_reader_text_alignment_title">Text Alignment</string>
+    <string name="settings_reader_text_alignment_desc">How text is aligned in the reader</string>
+    <string name="settings_reader_marking_mode_desc">How chapters are marked as read</string>
+    <string name="settings_reader_resume_behavior_title">Resume first unread</string>
+    <string name="settings_reader_resume_behavior_desc">When clicking the resume button in the novel info view, will ignore reading status to open unread first</string>
+    <string name="activity_css_export">Export CSS</string>
+    <string name="activity_css_paste">Paste clipboard</string>
+    <string name="activity_css_redo">Redo</string>
+    <string name="activity_css_undo">Undo</string>
+    <string name="activity_css_save">Save CSS</string>
+    <string name="activity_css_example"><![CDATA[
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <style>%s</style>
+        </head>
+        <body>
+            <h1>Header 1</h1>
+            <h2>Header 2</h2>
+            <h3>Header 3</h3>
+            <h4>Header 4</h4>
+            <h5>Header 5</h5>
+            <h6>Header 6</h6>
+            <blockquote>Block quote</blockquote>
+            <dd>Description</dd>
+            <div>Div</div>
+            <dl>
+                <dt>Description element</dt>
+            </dl>
+            <hr>… Break …</hr>
+            <ol>
+                <li>ordered list item</li>
+            </ol>
+            <ul>
+                <li>unordered list item</li>
+            </ul>
+            <p>Paragraph</p>
+            <pre>Preformatted</pre>
+        </body>
+    </html>
+]]></string>
+    <string name="activity_main_app_update_download">Downloading app update</string>
+    <string name="settings_advanced_clear_cookies_title">Clear cookies</string>
+    <string name="settings_advanced_clear_cookies_desc">Clear all cookies that Monogatari has for websites</string>
+    <string name="settings_advanced_clear_cookies_button">Clear</string>
+    <string name="settings_advanced_clear_cookies_complete">Cookies cleared</string>
+    <string name="settings_advanced_theme_desc">Change the theme that the application uses</string>
+    <string name="settings_advanced_custom_theme_toggle">Activate Custom Theme</string>
+    <string name="settings_advanced_custom_theme_desc">Enable custom colors that override the selected preset theme.</string>
+    <string name="settings_advanced_custom_theme_background">Background (App)</string>
+    <string name="settings_advanced_custom_theme_surface">Surface / Cards</string>
+    <string name="settings_advanced_custom_theme_primary">Primary / Accent</string>
+    <string name="settings_advanced_custom_theme_on_primary">Text on Primary</string>
+    <string name="settings_advanced_custom_theme_on_background">Text</string>
+    <string name="settings_advanced_custom_theme_icon_tint">Icon (optional)</string>
+    <string name="settings_advanced_custom_theme_nav_selected">Navigation Selected (Click Color)</string>
+    <string name="settings_advanced_custom_theme_top_bar_container">Top Bar Container</string>
+    <string name="settings_advanced_custom_theme_bottom_bar_container">Bottom Bar Container</string>
+    <string name="settings_advanced_custom_theme_bottom_bar_selected">Bottom Bar Selected</string>
+    <string name="settings_advanced_custom_theme_picker_title">Pick color</string>
+    <string name="settings_advanced_purge_novel_cache"><![CDATA[Removes any unbookmarked novels & info from Monogatari]]></string>
+    <string name="settings_advanced_kill_cycle_workers_button">Kill</string>
+    <string name="fragment_configure_extension_listing_desc">What list of novels should be displayed when the user opens up the extension to browse</string>
+    <string name="fragment_downloads_set_all_pending_title">Set all pending</string>
+    <string name="fragment_downloads_delete_all_title">Delete All</string>
+    <string name="fragment_novel_true_delete">True Delete</string>
+    <string name="settings_advanced_true_chapter_delete_title">Show True Chapter Delete</string>
+    <string name="settings_advanced_true_chapter_delete_desc">Expose an option to truly remove a chapter from Monogatari.\nUseful when a chapter is bugging</string>
+    <string name="toast_error_log_failed">Failed to create logfile, No logs will be stored</string>
+    <string name="worker_backup_complete">Backup Complete</string>
+    <string name="fragment_browse_ext_icon_desc">Icon of the extension</string>
+    <string name="backup_restore_print_chapters_title">Print chapter names during restore</string>
+    <string name="backup_restore_print_chapters_desc">Print chapter names to log during restore.\nUseful for debugging, not useful otherwise.\nMust be set before restoring</string>
+    <string name="restore_notification_content_novel_fail_io">IOException: %s</string>
+    <string name="backup_only_modified_title">Backup only modified</string>
+    <string name="backup_only_modified_desc">Backup only modified chapters, this saves on memory and file size</string>
+    <string name="fragment_backup_error_unselected">No backup has been selected to export</string>
+    <string name="export_backup_notification_missing_uri">URI not provided to export backup to</string>
+    <string name="export_backup_notification_invalid_backup">No such backup exists</string>
+    <string name="settings_advanced_log_title">Log to file</string>
+    <string name="settings_advanced_log_desc">Enabling logs to a file, but may cause slow downs.\nRequires a restart</string>
+    <string name="update_to">Update: %s</string>
+    <string name="download_chapter_updates_desc">Download chapters that have been recently added to Updates</string>
+    <string name="input_int">Input Integer</string>
+    <string name="input_int_range_desc">Please input an integer between a range of %1$d and %2$d (inclusive)</string>
+
+    <string name="input_float">Input Float</string>
+    <string name="input_float_range_desc">Please input an float between a range of %1$d and %2$d (inclusive)</string>
+    <string name="style_add">Add Style to Monogatari</string>
+    <string name="style_wait">Style sheets coming soon</string>
+    <string name="styles">Styles</string>
+    <string name="qr_code_scan">Add share link</string>
+    <string name="menu_share_url">Basic URL</string>
+    <string name="menu_share_qr">QR Code</string>
+    <string name="fragment_add_following">The following will be added</string>
+    <string name="fragment_add_extension">Extension</string>
+    <string name="fragment_add_repository">Repository</string>
+    <string name="fragment_add_novel">Novel</string>
+    <string name="fragment_add_invalid">Invalid URL code</string>
+    <string name="fragment_add_present_novel">This novel is already present: %s</string>
+    <string name="fragment_add_present_style">This style is already present: %s</string>
+    <string name="fragment_add_present_ext">This extension is already present: %s</string>
+    <string name="fragment_add_present_repo">This repository is already present: %s</string>
+    <string name="fragment_add_open_novel">Open Novel</string>
+    <string name="settings_advanced_auto_bookmark_title">Bookmark from QR</string>
+    <string name="settings_advanced_auto_bookmark_desc">Automatically bookmark novels that are scanned via QR code.</string>
+    <string name="reader_last_chapter">Last chapter:</string>
+    <string name="reader_next_chapter">Next chapter:</string>
+    <string name="fragment_library_menu_tri_by_title">By title</string>
+    <string name="fragment_library_menu_tri_by_unread">By unread chapter count</string>
+    <string name="fragment_library_menu_tri_by_id">By novel ID</string>
+    <string name="fragment_library_menu_tri_by_source">By source</string>
+    <string name="fragment_library_menu_tri_by_date">By date</string>
+    <string name="fragment_novel_info_image">Image of the novel</string>
+    <string name="action_open_in_webview">Open in webview</string>
+    <string name="reader_first_focus">Click the content to unfocus.</string>
+    <string name="reader_first_focus_dismiss">Dismiss</string>
+    <string name="fragment_catalogue_toast_background_add_fail">Failed to add: %s</string>
+    <string name="fragment_catalogue_error_base_url">Error getting URL for extension: %s</string>
+    <string name="fragment_catalogue_error_name">Error getting name of extension: %s</string>
+    <string name="fragment_catalogue_error_has_search">Error checking if extension has search: %s</string>
+    <string name="report">Report</string>
+    <string name="activity_main_error_theme">Error collecting app theme: %s</string>
+    <string name="activity_main_error_update_check">Error running app update: %s</string>
+    <string name="activity_main_error_handle_update">Error handling app update: %s</string>
+    <string name="fragment_novel_error_url">Error getting novel url: %s</string>
+    <string name="fragment_novel_error_load">Error loading novel: %s</string>
+    <string name="fragment_novel_error_load_chapters">Error getting chapters: %s</string>
+    <string name="fragment_novel_error_share">Error getting share: %s</string>
+    <string name="fragment_novel_error_true_delete">Error checking for true delete: %s</string>
+    <string name="worker_export_backup_null_resolver">Null content resolver when trying to write backup</string>
+    <string name="worker_export_backup_file_missing">How can the export file be missing</string>
+    <string name="worker_export_backup_missing_perm">Missing permissions to write backup</string>
+    <string name="worker_extension_install_error_http">HTTP error</string>
+    <string name="worker_extension_install_error_lua">Malformed extension?</string>
+    <string name="worker_extension_install_error_sql">SQL error when installing extension</string>
+    <string name="worker_extension_install_error_perm">File permission error</string>
+    <string name="worker_extension_install_error_io">IOException</string>
+    <string name="worker_extension_install_error_get_sql">SQL Error when getting extension</string>
+    <string name="less">Less</string>
+    <string name="fragment_novel_selected_download">Download selected chapters</string>
+    <string name="fragment_novel_selected_delete">Delete selected chapters from storage</string>
+    <string name="fragment_novel_selected_read">Mark selected chapters as read</string>
+    <string name="fragment_novel_selected_unread">Mark selected chapters as unread</string>
+    <string name="fragment_novel_selected_bookmark">Bookmark selected chapters</string>
+    <string name="fragment_novel_selected_unbookmark">Unbookmark selected chapters</string>
+    <string name="settings_reader_double_tap">Double tap to toggle focus</string>
+    <string name="settings_reader_double_tap_desc">Instead of a single tap, require a double tap to toggle the focus in the reader.</string>
+    <string name="settings_reader_double_tap_system">Double tap to toggle system UI</string>
+    <string name="settings_reader_double_tap_system_desc">By double tapping, one can toggle the system UI in the reader.\nDoes not work with double tap to toggle focus.</string>
+    <string name="fragment_novel_info_open_web_text">Webview</string>
+    <string name="fragment_catalogue_no_more">No more content, Sorry!</string>
+
+    <string name="fragment_repositories_action_remove">Remove repository</string>
+
+    <string name="backup_restore_low_storage">Backup on low storage</string>
+    <string name="backup_restore_low_storage_desc">Allows backups to occur on low storage, also effects cycle worker</string>
+    <string name="backup_restore_low_battery">Backup on low battery</string>
+    <string name="backup_restore_low_battery_desc">Allows backups to occur on low battery, also effects cycle worker</string>
+    <string name="backup_restore_only_idle">Backup only when idle</string>
+    <string name="backup_restore_only_idle_desc">Forces backups to occur when device is idle, also effects cycle worker</string>
+    <string name="cozy">Cozy</string>
+    <string name="settings_advanced_force_repo_update_title">Force repo sync</string>
+    <string name="settings_advanced_force_repo_update_desc">Sometimes, Repo sync does not load properly. This will force the repo to update.</string>
+    <string name="force">Force</string>
+    <string name="fragment_novel_delete_previous_fail">Failed to delete previous chapter: %s</string>
+    <string name="missing_extension">Extension is missing %i</string>
+    <string name="fragment_about_acra_id">ACRA Identification</string>
+    <string name="intro_acra">Enable Error Reporting</string>
+    <string name="intro_acra_desc">Enable error reporting to Monogatari\nIf enabled, Monogatari will collect crash logs containing device information and the app state during a crash.</string>
+    <string name="settings_advanced_enable_acra">Enable error reporting to Monogatari\nRequires App Restart</string>
+    <string name="intro_page_next">Navigate to next page</string>
+    <string name="intro_license_desc_new">For legal purposes, please carefully read all of the following license to understand your rights.</string>
+    <string name="intro_perm_notif_desc">Monogatari uses notifications for many ongoing tasks such as updates and backups.</string>
+    <string name="intro_perm_none">Good news, Monogatari needs no permissions!</string>
+    <string name="intro_what_is_app_desc_new">"Monogatari is a Libre FOSS Android application to read Novels.\nOnly with Monogatari can you have all your novel reading features in one place."</string>
+    <string name="intro_close">Close introduction</string>
+    <string name="intro_cta_continue">Continue</string>
+    <string name="intro_cta_done">Start reading</string>
+    <string name="intro_permission_allow">Allow notifications</string>
+    <string name="intro_permission_granted">Permission granted</string>
+    <string name="intro_permission_denied_help">You can continue without this permission and enable it later from Settings.</string>
+    <string name="intro_open_settings">Open settings</string>
+    <string name="intro_personalize_title">Personalize your experience</string>
+    <string name="settings_backup_cycle_desc">How often should backups be automatically made</string>
+    <string name="settings_backup_cycle_title">Backup Frequency</string>
+    <string name="fragment_repositories_add_error">Invalid URL</string>
+    <string name="categories_empty">There are no categories, add one!</string>
+    <string name="settings_reader_table_hack_title">Enable table hack</string>
+    <string name="settings_reader_table_hack_desc">Force tables to have a scroll bar for overflows. Enabling this can break accessibility functionality.</string>
+    <string name="pin_on_top">Pinned on top</string>
+    <string name="toggle_pin">Toggle Pin</string>
+    <string name="settings_advanced_site_protection_title">Site Protection Delayer</string>
+    <string name="settings_advanced_site_protection_desc">Determines the delay between each request to a site. Helping prevent site bans.</string>
+    <string name="settings_reader_text_sel_title">Disable reader text selection</string>
+    <string name="settings_reader_text_sel_desc">If you have issues with accidently selecting text, this can help you.</string>
+    <string name="editor">Editor</string>
+    <string name="preview">Preview</string>
+    <string name="fragment_library_menu_tri_by_updated">By last updated</string>
+    <string name="clear">Clear</string>
+    <string name="before">Before</string>
+    <string name="fragment_updates_clear">Select date to clear updates before</string>
+
+
+    <string name="fragment_history">History</string>
+    <string name="fragment_history_error_empty">No history yet, Get reading!</string>
+    <string name="fragment_more_dest_history">@string/fragment_history</string>
+    <string name="fragment_history_menu_clear">Clear History</string>
+    <string name="fragment_history_picker_date">Select a date to clear before</string>
+    <string name="settings_download_delete_on_read_title">Delete on read</string>
+    <string name="settings_download_delete_on_read_desc">What chapter to delete when a chapter is read (includes previous chapters).</string>
+    <string name="fragment_library_menu_tri_by_read_time">By last read</string>
+    <string name="settings_advanced_ua_title">User agent</string>
+    <string name="settings_advanced_ua_desc">Identification to send to sites when making requests. Changes applied after restart.</string>
+    <string name="settings_advanced_sua_title">Enable Monogatari user agent</string>
+    <string name="settings_advanced_sua_desc">Explicitly identify the program as Monogatari. Disabled by default due to possible site blocks.</string>
+    <string name="analytics">Analytics</string>
+    <string name="fragment_more_dest_analytics">Analytics</string>
+    <string name="add_extension">Add Extension</string>
+    <string name="add_extension_wizard_title">Extension Builder</string>
+    <string name="add_extension_wizard_subtitle">Start building a structured extension specification.</string>
+    <string name="extension_builder_architecture_status_title">Architecture status</string>
+    <string name="extension_builder_status_spec_ready">Spec: Ready</string>
+    <string name="extension_builder_status_validator_stub">Validator: Stub</string>
+    <string name="extension_builder_status_generator_stub">Generator: Stub</string>
+    <string name="extension_builder_status_storage_stub">Storage: Stub</string>
+    <string name="extension_builder_validation_ready">Validation status: Ready</string>
+    <string name="extension_builder_validation_invalid">Validation status: Invalid (%1$s)</string>
+    <string name="extension_builder_generation_stub_generated">Generation status: Stub generated Lua preview</string>
+    <string name="extension_builder_generation_stub_empty">Generation status: Stub generated no output</string>
+    <string name="extension_builder_storage_stub_saved">Storage status: Stub saved locally (%1$d spec)</string>
+    <string name="extension_builder_storage_stub_unavailable">Storage status: Stub not available</string>
+    <string name="reader_long_reading_title">Long Reading Detected</string>
+    <string name="reader_long_reading_desc">Please look at something at least 5–10 meters away for 20 seconds to avoid eye damage.</string>
+    <string name="settings_reader_track_long_reading_title">Track long reading</string>
+    <string name="settings_reader_track_long_reading_desc">Track users reading time to ensure the user maintains their eye health by requiring the user to look at something 5-10 meters away for 20 seconds every 20 minutes.</string>
+    <string name="global_search">Global Search\n</string>
+    <plurals name="fragment_novel_toggle_delete_chapters">
+        <!-- Ignore zero-->
+        <item quantity="one">Delete %d chapter?</item>
+        <item quantity="other">Delete %d chapters?</item>
+    </plurals>
+
+    <plurals name="worker_novel_update_updated_novel_count">
+        <item quantity="one">%d new chapter.</item>
+        <item quantity="zero">No new chapters.</item>
+        <item quantity="other">%d new chapters.</item>
+    </plurals>
+
+
+    <!-- Error Key Messages -->
+
+
+    <array name="text_alignments">
+        <item>@string/text_alignment_start</item>
+        <item>@string/text_alignment_center</item>
+        <item>@string/text_alignment_justified</item>
+        <item>@string/text_alignment_end</item>
+    </array>
+
+    <array name="application_themes">
+        <item>@string/follow_system_theme</item>
+        <item>@string/light</item>
+        <item>@string/dark</item>
+        <item>@string/emerald_manuscript_theme</item>
+        <item>@string/midnight_ink_gold_theme</item>
+    </array>
+
+    <array name="novel_card_types">
+        <item>@string/normal</item>
+        <item>@string/compressed</item>
+        <item>@string/comfy</item>
+    </array>
+
+
+    <string name="extension_builder_name">Extension name</string>
+    <string name="extension_builder_language">Language code</string>
+    <string name="extension_builder_author">Author</string>
+    <string name="extension_builder_version">Version</string>
+    <string name="extension_builder_base_url">Base URL</string>
+    <string name="extension_builder_user_agent">User-Agent (optional)</string>
+    <string name="extension_builder_headers">Default headers</string>
+    <string name="extension_builder_add_header">Add header</string>
+    <string name="extension_builder_header_key">Header key</string>
+    <string name="extension_builder_header_value">Header value</string>
+    <string name="extension_builder_remove">Remove</string>
+    <string name="extension_builder_cap_search">Supports search</string>
+    <string name="extension_builder_cap_latest">Supports latest/updates listing</string>
+    <string name="extension_builder_cap_genres">Supports genres/tags</string>
+    <string name="extension_builder_cap_filters">Supports filters</string>
+    <string name="extension_builder_cap_multi_domain">Supports multiple domains</string>
+    <string name="extension_builder_review_summary">Review summary</string>
+    <string name="extension_builder_lua_preview">Lua preview</string>
+    <string name="extension_builder_save_spec">Save spec</string>
+    <string name="extension_builder_generate_lua">Generate Lua</string>
+    <string name="extension_builder_copy_lua">Copy</string>
+    <string name="extension_builder_back">Back</string>
+    <string name="extension_builder_next">Next</string>
+    <string name="extension_builder_saved_spec">Spec saved</string>
+    <string name="extension_builder_saved_lua">Lua saved</string>
+    <string name="extension_builder_error_storage">Failed to save extension builder data</string>
+    <string name="extension_builder_error_validation">Fix validation errors before generating Lua</string>
+    <string name="extension_builder_summary_name_lang">%1$s (%2$s)</string>
+    <string name="extension_builder_summary_version">v%1$s</string>
+    <string name="extension_builder_runtime_id">Runtime ID: %1$d</string>
+    <string name="extension_builder_preview_run">Preview / Test Run</string>
+    <string name="extension_builder_install_anyway">Install anyway</string>
+    <string name="extension_builder_flow_state">Flow state: %1$s</string>
+    <string name="extension_builder_preview_meta">Runtime metadata</string>
+    <string name="extension_builder_preview_meta_line">id=%1$d • %2$s • %3$s • v%4$s</string>
+    <string name="extension_builder_preview_search_listing">Search=%1$s, listings=%2$d</string>
+    <string name="extension_builder_diagnostics">Diagnostics</string>
+    <string name="extension_builder_preview_success">Preview succeeded</string>
+    <string name="extension_builder_preview_failed">Preview failed</string>
+    <string name="extension_builder_preview_required">Preview must pass before install</string>
+    <string name="extension_builder_install_success">Extension installed</string>
+    <string name="extension_builder_install_failed">Install failed</string>
+    <string name="extension_builder_install_in_progress">Installation already in progress</string>
+    <string name="extension_builder_existing_id_replaced">Extension with this ID already exists. Replacing existing install.</string>
+    <string name="extension_builder_update_success">Extension updated</string>
+    <string name="uninstall_extension">Uninstall Extension</string>
+    <string name="extension_uninstall_confirm">Uninstall extension?</string>
+    <string name="extension_uninstalled">Extension uninstalled</string>
+    <string name="results_empty_title">No results</string>
+    <string name="results_empty_subtitle">This extension returned 0 items (parsing may not be implemented yet).</string>
+    <string name="listing_empty_fallback_subtitle">Listing returned 0 items. The website loaded successfully, but no parsing logic is implemented yet.</string>
+    <string name="extension_builder_finish_install">Finish / Install</string>
+
+
+    <string name="parsing_manual_step_title">Parsing (Manual Setup)</string>
+    <string name="parsing_enable_now_label">Enable parsing now (recommended)</string>
+    <string name="parsing_disabled_hint">Parsing is optional. If disabled, generated Lua remains template mode.</string>
+    <string name="parsing_advanced_hint">Advanced mode lets you inject one Lua snippet used by listing/search/novel/passage hooks.</string>
+    <string name="parsing_lua_override_label">Lua override snippet</string>
+    <string name="parsing_mode_basic">Basic</string>
+    <string name="parsing_mode_advanced">Advanced</string>
+    <string name="parsing_manual_intro_title">Manual Parsing Setup (Beginner Friendly)</string>
+    <string name="parsing_manual_intro_b1">• You will copy CSS selectors from your browser’s Inspect tool.</string>
+    <string name="parsing_manual_intro_b2">• We use these selectors to find titles, links, and images in the page HTML.</string>
+    <string name="parsing_manual_intro_b3">• Tip: Prefer stable class selectors like .media-item instead of long selectors with &gt; and :nth-child.</string>
+    <string name="parsing_manual_intro_b4">• After filling fields, press ‘Test Parsing’ to verify.</string>
+    <string name="parsing_how_to_show">How to</string>
+    <string name="parsing_how_to_hide">Hide help</string>
+    <string name="parsing_how_to_1">• Open the website in your desktop browser.</string>
+    <string name="parsing_how_to_2">• Right click a book → Inspect.</string>
+    <string name="parsing_how_to_3">• Right click the highlighted HTML element → Copy → Copy selector.</string>
+    <string name="parsing_how_to_4">• Simplify it if needed (remove #app &gt; div &gt; ... and :nth-child).</string>
+    <string name="parsing_how_to_5">• Paste into the field below and run Test Parsing.</string>
+    <string name="parsing_section_listing_title">Listing / Search Results (books grid/list)</string>
+    <string name="parsing_section_novel_title">Novel detail page (single novel page)</string>
+    <string name="parsing_section_chapters_title">Chapters list (repeated chapter rows + links)</string>
+    <string name="parsing_section_content_title">Chapter content page</string>
+    <string name="parsing_field_book_card_label">Book card selector (CSS)</string>
+    <string name="parsing_field_book_card_help">Selects ONE repeated ‘book card’ element (title + cover + link). In Inspect: choose the outer container that repeats for every book. Example: .media.mangas-list or .book-item. Avoid overly long selectors with :nth-child.</string>
+    <string name="parsing_field_title_label">Title selector inside the book card</string>
+    <string name="parsing_field_title_help">Finds the title element inside each book card. Example: .media-body h2 or .title. Usually uses TEXT (not an attribute).</string>
+    <string name="parsing_field_title_source_label">Where to read the title from</string>
+    <string name="parsing_source_help">TEXT: visible text (recommended). ATTRIBUTE: use an attribute like title or data-title (rare).</string>
+    <string name="parsing_source_text_label">TEXT</string>
+    <string name="parsing_source_attr_label">ATTRIBUTE</string>
+    <string name="parsing_field_title_attr_label">Title attribute name</string>
+    <string name="parsing_field_title_attr_help">Example: title</string>
+    <string name="parsing_field_link_selector_label">Link selector inside the book card</string>
+    <string name="parsing_field_link_selector_help">Selects the &lt;a&gt; element that links to the novel detail page. Example: a or .media-body &gt; a.</string>
+    <string name="parsing_field_link_attr_label">Link attribute name</string>
+    <string name="parsing_field_link_attr_help">Usually href.</string>
+    <string name="parsing_field_image_selector_label">Cover image selector inside the book card</string>
+    <string name="parsing_field_image_selector_help">Selects the &lt;img&gt; inside the card. Example: img or .manga-block img.</string>
+    <string name="parsing_field_image_attr_label">Cover image attribute</string>
+    <string name="parsing_field_image_attr_help">Usually src. If the site uses lazy-loading, try data-src.</string>
+    <string name="parsing_field_image_attr_note">If Test Parsing shows empty images, switch between src and data-src.</string>
+    <string name="parsing_field_novel_title_label">Novel title selector</string>
+    <string name="parsing_field_novel_title_help">Inspect the novel page heading. Example: h1 or .entry-title.</string>
+    <string name="parsing_field_cover_label">Cover selector</string>
+    <string name="parsing_field_cover_help">Inspect the novel cover image. Example: .cover img.</string>
+    <string name="parsing_field_description_label">Description selector</string>
+    <string name="parsing_field_description_help">Inspect the summary block. Example: .summary or .description.</string>
+    <string name="parsing_field_authors_label">Authors selector (optional)</string>
+    <string name="parsing_field_authors_help">Inspect author links/text. Example: .author a.</string>
+    <string name="parsing_field_genres_label">Genres selector (optional)</string>
+    <string name="parsing_field_genres_help">Inspect genre tags. Example: .genres a.</string>
+    <string name="parsing_field_status_label">Status selector (optional)</string>
+    <string name="parsing_field_status_help">Inspect status text. Example: .status.</string>
+    <string name="parsing_field_chapter_item_label">Chapter item selector</string>
+    <string name="parsing_field_chapter_item_help">Select the repeated chapter row container. Example: .chapter-row.</string>
+    <string name="parsing_field_chapter_title_label">Chapter title selector</string>
+    <string name="parsing_field_chapter_title_help">Selector inside each chapter row for title text. Example: a or .chapter-title.</string>
+    <string name="parsing_field_chapter_url_label">Chapter URL selector</string>
+    <string name="parsing_field_chapter_url_help">Selector inside each chapter row for the chapter link (&lt;a&gt;).</string>
+    <string name="parsing_field_chapter_url_attr_label">Chapter link attribute</string>
+    <string name="parsing_field_chapter_url_attr_help">The attribute that contains the chapter URL. Usually "href".</string>
+    <string name="parsing_field_content_label">Content selector</string>
+    <string name="parsing_field_content_help">Main chapter content selector. Example: .chapter-content.</string>
+    <string name="parsing_field_remove_label">Remove selectors (optional)</string>
+    <string name="parsing_field_remove_help">Selectors to remove before output. Example: script, .ads, .banner.</string>
+    <string name="parsing_output_label">Output format</string>
+    <string name="parsing_output_html">HTML (keeps paragraphs)</string>
+    <string name="parsing_output_text">TEXT (plain text)</string>
+    <string name="parsing_copy_ready_examples">Copy-ready examples</string>
+    <string name="parsing_copy_ready_examples_list">.item  •  .card  •  .media  •  h1  •  a  •  img</string>
+    <string name="parsing_validation_required_selector">This selector is required.</string>
+    <string name="parsing_validation_required_attribute">This attribute is required.</string>
+    <string name="parsing_validation_warn_nth">This selector looks too specific (contains :nth-child). Consider using a class selector like .book-item.</string>
+    <string name="parsing_validation_warn_long">This selector looks too specific (long &gt; chain). Try a shorter selector.</string>
+    <string name="parsing_validation_warn_selector_quotes">Selectors should not include quotes.</string>
+    <string name="parsing_validation_warn_attribute_plain">Attribute names should be plain text like href or src (no quotes/spaces).</string>
+    <string name="parsing_test_title">End-to-end test</string>
+    <string name="parsing_test_listing_button">Test Listing Selectors</string>
+    <string name="parsing_test_novel_button">Test Novel Page Selectors</string>
+    <string name="parsing_test_chapter_list_button">Test Chapter List Selectors</string>
+    <string name="parsing_test_chapter_content_button">Test Chapter Content Selector</string>
+    <string name="parsing_test_loading">Running test…</string>
+    <string name="parsing_test_missing_field">Missing required field: %1$s</string>
+    <string name="parsing_test_error_missing_fields">Please fill the required fields for this section.</string>
+    <string name="parsing_test_phase_label">Phases: Fetch → Parse → Validate</string>
+    <string name="parsing_test_first_item_title">First item title: %1$s</string>
+    <string name="parsing_test_novel_cover_found">Cover found: %1$s</string>
+    <string name="parsing_test_novel_description_length">Description length: %1$d chars</string>
+    <string name="parsing_test_novel_author_count">Authors found: %1$d</string>
+    <string name="parsing_test_novel_genre_count">Genres found: %1$d</string>
+    <string name="parsing_test_chapter_count">Chapter count: %1$d</string>
+    <string name="parsing_test_content_preview">Preview: %1$s</string>
+
+    <string name="parsing_test_listing_url">Test listing URL</string>
+    <string name="parsing_test_novel_url">Test novel URL (optional)</string>
+    <string name="parsing_test_chapter_url">Test chapter URL (optional)</string>
+    <string name="parsing_test_run">Run test</string>
+    <string name="parsing_test_fetch_success">Fetched HTML: success • URL=%1$s • HTTP=%2$d • size=%3$d chars</string>
+    <string name="parsing_test_cards_found">Book cards found: %1$d</string>
+    <string name="parsing_test_cards_zero_1">No book cards matched. Check Item selector.</string>
+    <string name="parsing_test_cards_zero_2">Try selecting the outer repeating container.</string>
+    <string name="parsing_test_cards_zero_3">Tip: avoid :nth-child and long selectors.</string>
+    <string name="parsing_test_html_debug">First 300 HTML chars (debug): %1$s</string>
+    <string name="parsing_test_title_matches">Title matches in first card: %1$d</string>
+    <string name="parsing_test_link_matches">Link matches in first card: %1$d • sample href: %2$s</string>
+    <string name="parsing_test_image_matches">Image matches in first card: %1$d • sample image attr: %2$s</string>
+    <string name="parsing_test_title_zero">Title selector found 0 elements inside card. Inspect the title node and copy its selector.</string>
+    <string name="parsing_test_link_zero">URL selector found 0 links. Make sure you select the &lt;a&gt; element.</string>
+    <string name="parsing_test_image_zero">Image selector found 0 images. Try img or .cover img.</string>
+    <string name="parsing_test_preview_url">URL raw: %1$s • expanded: %2$s</string>
+    <string name="parsing_test_preview_img">Image raw: %1$s • expanded: %2$s</string>
+    <string name="parsing_test_novel_title_found">Title found: %1$s</string>
+    <string name="parsing_test_chapters_found">Chapters found: %1$d</string>
+    <string name="parsing_test_check_chapter_item">Check chapter item selector.</string>
+    <string name="parsing_test_content_matched">Content matched: %1$s</string>
+    <string name="parsing_test_output_length">Output length: %1$d chars</string>
+    <string name="parsing_test_check_content_selector">Check content selector.</string>
+    <string name="parsing_test_error_enable_basic">Enable parsing and select Basic mode to run this test.</string>
+    <string name="parsing_test_error_enter_url">Enter a listing URL, novel URL, or chapter URL first.</string>
+    <string name="parsing_test_error_with_phase">Parsing test failed: %1$s</string>
+    <string name="parsing_test_error_network_main_thread">Internal error: network executed on UI thread (fixed).</string>
+
+</resources>

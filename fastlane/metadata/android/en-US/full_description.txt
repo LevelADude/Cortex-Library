@@ -1,0 +1,20 @@
+Monogatari is the extendable novel reader for Android.
+
+## Features include
+
+- Fully customizable reader.
+- Updating system to keep track of new chapters.
+- Modifiable repositories providing a broad extension catalog.
+- Material You theming for a polished reading experience.
+- Backup novel progress for safe keeping.
+- Share novels via QR code easily.
+
+## Disclaimer
+
+Monogatari is essentially a web scraper,
+which can expand its built-in catalog through extension repositories.
+
+Monogatari does not, in any way,
+own copyright over any of the novels present in its catalogs or extensions.
+All DMCA requests should be forwarded to the original source, as Monogatari does not host anything.
+All data is scraped, saved to the users' devices and then displayed.

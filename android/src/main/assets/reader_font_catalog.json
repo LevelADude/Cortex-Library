@@ -1,0 +1,911 @@
+[
+  {
+    "id": "library:roboto",
+    "name": "Roboto",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/roboto@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 101
+  },
+  {
+    "id": "library:open-sans",
+    "name": "Open Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/open-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 100
+  },
+  {
+    "id": "library:lato",
+    "name": "Lato",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/lato@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 99
+  },
+  {
+    "id": "library:montserrat",
+    "name": "Montserrat",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/montserrat@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 98
+  },
+  {
+    "id": "library:oswald",
+    "name": "Oswald",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/oswald@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 97
+  },
+  {
+    "id": "library:source-sans-3",
+    "name": "Source Sans 3",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/source-sans-3@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 96
+  },
+  {
+    "id": "library:raleway",
+    "name": "Raleway",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/raleway@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 95
+  },
+  {
+    "id": "library:ubuntu",
+    "name": "Ubuntu",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/ubuntu@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 94
+  },
+  {
+    "id": "library:nunito",
+    "name": "Nunito",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/nunito@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 93
+  },
+  {
+    "id": "library:poppins",
+    "name": "Poppins",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/poppins@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 92
+  },
+  {
+    "id": "library:merriweather",
+    "name": "Merriweather",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/merriweather@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 91
+  },
+  {
+    "id": "library:playfair-display",
+    "name": "Playfair Display",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/playfair-display@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 90
+  },
+  {
+    "id": "library:lora",
+    "name": "Lora",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/lora@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 89
+  },
+  {
+    "id": "library:noto-serif",
+    "name": "Noto Serif",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-serif@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 88
+  },
+  {
+    "id": "library:pt-serif",
+    "name": "PT Serif",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/pt-serif@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 87
+  },
+  {
+    "id": "library:bitter",
+    "name": "Bitter",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/bitter@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 86
+  },
+  {
+    "id": "library:arvo",
+    "name": "Arvo",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/arvo@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 85
+  },
+  {
+    "id": "library:libre-baskerville",
+    "name": "Libre Baskerville",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/libre-baskerville@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 84
+  },
+  {
+    "id": "library:crimson-pro",
+    "name": "Crimson Pro",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/crimson-pro@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 83
+  },
+  {
+    "id": "library:cormorant-garamond",
+    "name": "Cormorant Garamond",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/cormorant-garamond@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 82
+  },
+  {
+    "id": "library:inter",
+    "name": "Inter",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/inter@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 81
+  },
+  {
+    "id": "library:work-sans",
+    "name": "Work Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/work-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 80
+  },
+  {
+    "id": "library:fira-sans",
+    "name": "Fira Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/fira-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 79
+  },
+  {
+    "id": "library:rubik",
+    "name": "Rubik",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/rubik@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 78
+  },
+  {
+    "id": "library:manrope",
+    "name": "Manrope",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/manrope@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 77
+  },
+  {
+    "id": "library:cabin",
+    "name": "Cabin",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/cabin@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 76
+  },
+  {
+    "id": "library:karla",
+    "name": "Karla",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/karla@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 75
+  },
+  {
+    "id": "library:barlow",
+    "name": "Barlow",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/barlow@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 74
+  },
+  {
+    "id": "library:mulish",
+    "name": "Mulish",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/mulish@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 73
+  },
+  {
+    "id": "library:m-plus-1p",
+    "name": "M PLUS 1p",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/m-plus-1p@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 72
+  },
+  {
+    "id": "library:inconsolata",
+    "name": "Inconsolata",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/inconsolata@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 71
+  },
+  {
+    "id": "library:source-code-pro",
+    "name": "Source Code Pro",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/source-code-pro@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 70
+  },
+  {
+    "id": "library:jetbrains-mono",
+    "name": "JetBrains Mono",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 69
+  },
+  {
+    "id": "library:fira-code",
+    "name": "Fira Code",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/fira-code@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 68
+  },
+  {
+    "id": "library:ibm-plex-mono",
+    "name": "IBM Plex Mono",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-mono@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 67
+  },
+  {
+    "id": "library:space-mono",
+    "name": "Space Mono",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/space-mono@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 66
+  },
+  {
+    "id": "library:cousine",
+    "name": "Cousine",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/cousine@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 65
+  },
+  {
+    "id": "library:anonymous-pro",
+    "name": "Anonymous Pro",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/anonymous-pro@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 64
+  },
+  {
+    "id": "library:vt323",
+    "name": "VT323",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/vt323@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 63
+  },
+  {
+    "id": "library:nanum-gothic-coding",
+    "name": "Nanum Gothic Coding",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/nanum-gothic-coding@latest/latin-400-normal.ttf",
+    "category": "monospace",
+    "popularity": 62
+  },
+  {
+    "id": "library:pacifico",
+    "name": "Pacifico",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/pacifico@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 61
+  },
+  {
+    "id": "library:dancing-script",
+    "name": "Dancing Script",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/dancing-script@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 60
+  },
+  {
+    "id": "library:satisfy",
+    "name": "Satisfy",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/satisfy@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 59
+  },
+  {
+    "id": "library:great-vibes",
+    "name": "Great Vibes",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/great-vibes@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 58
+  },
+  {
+    "id": "library:caveat",
+    "name": "Caveat",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/caveat@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 57
+  },
+  {
+    "id": "library:permanent-marker",
+    "name": "Permanent Marker",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/permanent-marker@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 56
+  },
+  {
+    "id": "library:shadows-into-light",
+    "name": "Shadows Into Light",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/shadows-into-light@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 55
+  },
+  {
+    "id": "library:indie-flower",
+    "name": "Indie Flower",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/indie-flower@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 54
+  },
+  {
+    "id": "library:patrick-hand",
+    "name": "Patrick Hand",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/patrick-hand@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 53
+  },
+  {
+    "id": "library:amatic-sc",
+    "name": "Amatic SC",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/amatic-sc@latest/latin-400-normal.ttf",
+    "category": "handwriting",
+    "popularity": 52
+  },
+  {
+    "id": "library:bebas-neue",
+    "name": "Bebas Neue",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/bebas-neue@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 51
+  },
+  {
+    "id": "library:abril-fatface",
+    "name": "Abril Fatface",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/abril-fatface@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 50
+  },
+  {
+    "id": "library:lobster",
+    "name": "Lobster",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/lobster@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 49
+  },
+  {
+    "id": "library:anton",
+    "name": "Anton",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/anton@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 48
+  },
+  {
+    "id": "library:bangers",
+    "name": "Bangers",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/bangers@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 47
+  },
+  {
+    "id": "library:fredoka",
+    "name": "Fredoka",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/fredoka@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 46
+  },
+  {
+    "id": "library:righteous",
+    "name": "Righteous",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/righteous@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 45
+  },
+  {
+    "id": "library:alfa-slab-one",
+    "name": "Alfa Slab One",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/alfa-slab-one@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 44
+  },
+  {
+    "id": "library:poiret-one",
+    "name": "Poiret One",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/poiret-one@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 43
+  },
+  {
+    "id": "library:cinzel",
+    "name": "Cinzel",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/cinzel@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 42
+  },
+  {
+    "id": "library:noto-sans",
+    "name": "Noto Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 41
+  },
+  {
+    "id": "library:noto-sans-jp",
+    "name": "Noto Sans JP",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-jp@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 40
+  },
+  {
+    "id": "library:noto-sans-kr",
+    "name": "Noto Sans KR",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-kr@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 39
+  },
+  {
+    "id": "library:noto-sans-sc",
+    "name": "Noto Sans SC",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-sc@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 38
+  },
+  {
+    "id": "library:noto-sans-tc",
+    "name": "Noto Sans TC",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-tc@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 37
+  },
+  {
+    "id": "library:noto-sans-arabic",
+    "name": "Noto Sans Arabic",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-arabic@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 36
+  },
+  {
+    "id": "library:noto-sans-devanagari",
+    "name": "Noto Sans Devanagari",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-devanagari@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 35
+  },
+  {
+    "id": "library:noto-sans-thai",
+    "name": "Noto Sans Thai",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-thai@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 34
+  },
+  {
+    "id": "library:noto-sans-hebrew",
+    "name": "Noto Sans Hebrew",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-hebrew@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 33
+  },
+  {
+    "id": "library:noto-sans-georgian",
+    "name": "Noto Sans Georgian",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/noto-sans-georgian@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 32
+  },
+  {
+    "id": "library:merriweather-sans",
+    "name": "Merriweather Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/merriweather-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 31
+  },
+  {
+    "id": "library:quicksand",
+    "name": "Quicksand",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/quicksand@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 30
+  },
+  {
+    "id": "library:titillium-web",
+    "name": "Titillium Web",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/titillium-web@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 29
+  },
+  {
+    "id": "library:heebo",
+    "name": "Heebo",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/heebo@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 28
+  },
+  {
+    "id": "library:asap",
+    "name": "Asap",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/asap@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 27
+  },
+  {
+    "id": "library:archivo",
+    "name": "Archivo",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/archivo@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 26
+  },
+  {
+    "id": "library:hind",
+    "name": "Hind",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/hind@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 25
+  },
+  {
+    "id": "library:signika",
+    "name": "Signika",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/signika@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 24
+  },
+  {
+    "id": "library:teko",
+    "name": "Teko",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/teko@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 23
+  },
+  {
+    "id": "library:kanit",
+    "name": "Kanit",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/kanit@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 22
+  },
+  {
+    "id": "library:josefin-sans",
+    "name": "Josefin Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/josefin-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 21
+  },
+  {
+    "id": "library:zilla-slab",
+    "name": "Zilla Slab",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/zilla-slab@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 20
+  },
+  {
+    "id": "library:domine",
+    "name": "Domine",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/domine@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 19
+  },
+  {
+    "id": "library:ibm-plex-serif",
+    "name": "IBM Plex Serif",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/ibm-plex-serif@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 18
+  },
+  {
+    "id": "library:vollkorn",
+    "name": "Vollkorn",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/vollkorn@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 17
+  },
+  {
+    "id": "library:alegreya",
+    "name": "Alegreya",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/alegreya@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 16
+  },
+  {
+    "id": "library:alegreya-sans",
+    "name": "Alegreya Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/alegreya-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 15
+  },
+  {
+    "id": "library:exo-2",
+    "name": "Exo 2",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/exo-2@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 14
+  },
+  {
+    "id": "library:baloo-2",
+    "name": "Baloo 2",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/baloo-2@latest/latin-400-normal.ttf",
+    "category": "display",
+    "popularity": 13
+  },
+  {
+    "id": "library:prompt",
+    "name": "Prompt",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/prompt@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 12
+  },
+  {
+    "id": "library:mukta",
+    "name": "Mukta",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/mukta@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 11
+  },
+  {
+    "id": "library:overpass",
+    "name": "Overpass",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/overpass@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 10
+  },
+  {
+    "id": "library:questrial",
+    "name": "Questrial",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/questrial@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 9
+  },
+  {
+    "id": "library:catamaran",
+    "name": "Catamaran",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/catamaran@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 8
+  },
+  {
+    "id": "library:sora",
+    "name": "Sora",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/sora@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 7
+  },
+  {
+    "id": "library:urbanist",
+    "name": "Urbanist",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/urbanist@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 6
+  },
+  {
+    "id": "library:outfit",
+    "name": "Outfit",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/outfit@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 5
+  },
+  {
+    "id": "library:dm-sans",
+    "name": "DM Sans",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/dm-sans@latest/latin-400-normal.ttf",
+    "category": "sans-serif",
+    "popularity": 4
+  },
+  {
+    "id": "library:dm-serif-display",
+    "name": "DM Serif Display",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/dm-serif-display@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 3
+  },
+  {
+    "id": "library:cardo",
+    "name": "Cardo",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/cardo@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 2
+  },
+  {
+    "id": "library:philosopher",
+    "name": "Philosopher",
+    "previewText": "The quick brown fox jumps over the lazy dog. ÄÖÜ äöü ß 123",
+    "source": "Google Fonts",
+    "downloadUrl": "https://cdn.jsdelivr.net/fontsource/fonts/philosopher@latest/latin-400-normal.ttf",
+    "category": "serif",
+    "popularity": 1
+  }
+]

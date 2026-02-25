@@ -1,0 +1,3 @@
+## Fixes
+- Revert DownloadWorker.kt chapter image downloading due to app crashes
+- Fix crash in which filteredChapters is empty

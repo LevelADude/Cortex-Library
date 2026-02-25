@@ -1,0 +1,12 @@
+## New
+- ACRA for uptodown
+
+## Fixes
+- Fix F-Droid updater
+
+### v2.2.1
+- Revert DownloadWorker.kt chapter image downloading due to app crashes
+- Fix crash in which filteredChapters is empty
+
+## Misc
+- Disable update on non-standard debug

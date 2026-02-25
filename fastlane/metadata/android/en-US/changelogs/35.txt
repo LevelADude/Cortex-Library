@@ -1,0 +1,15 @@
+# v2.1.4
+
+## New:
+
+- New Introduction UI
+
+## Fixes:
+
+- Fix chapter order being wonky
+- Fix github extensions link
+
+## Misc:
+
+- Removed binary downloader for F-Droid updater
+- Numerous performance improvements by @jobobby04

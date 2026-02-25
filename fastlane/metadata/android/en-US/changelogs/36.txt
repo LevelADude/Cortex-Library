@@ -1,0 +1,14 @@
+# v2.1.5
+
+## New
+
+- Add separate ACRA for F-Droid
+
+## Fixes
+
+- Legacy navigation
+- Random scroll behavior due to compose interop
+
+## Misc
+
+- Update dependencies

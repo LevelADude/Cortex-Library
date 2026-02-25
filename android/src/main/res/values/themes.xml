@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="windowActionModeOverlay">true</item>
+
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+
+        <item name="colorSecondary">@color/colorSecondary</item>
+        
+
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <!-- Some ROMs make black navbars white (e.g. OxygenOS) -->
+        <item name="android:navigationBarColor">@color/black_trans</item>
+    </style>
+
+    <style name="AppTheme.Main" parent="AppTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/black_trans</item>
+        <item name="appBarLayoutStyle">@style/AppTheme.Widget.AppBarLayout</item>
+        <item name="floatingActionButtonStyle">@style/AppTheme.Widget.FAB</item>
+        <item name="extendedFloatingActionButtonStyle">@style/AppTheme.Widget.ExtendedFAB</item>
+        <item name="strokeColor">?colorPrimary</item>
+        <item name="isMonogatariTheme">true</item>
+        <item name="actionBarTheme">@style/AppTheme.Widget.ActionBar</item>
+        <item name="appThemeVariant">0</item>
+    </style>
+
+    <style name="AppTheme.Main.Light" parent="AppTheme.Main">
+        <item name="colorPrimary">@color/colorPrimaryLegacy</item>
+        <item name="android:colorPrimary">@color/colorPrimaryLegacy</item>
+        <item name="colorSecondary">@color/colorSecondaryLegacy</item>
+        
+        <item name="isMonogatariTheme">false</item>
+        <item name="appThemeVariant">1</item>
+    </style>
+
+
+    <style name="AppTheme.Main.FollowSystem" parent="AppTheme.Main">
+        <item name="isMonogatariTheme">false</item>
+        <item name="appThemeVariant">3</item>
+    </style>
+
+    <style name="AppTheme.Main.Emerald" parent="AppTheme.Main">
+        <item name="isMonogatariTheme">false</item>
+        <item name="appThemeVariant">4</item>
+        <item name="colorPrimary">#114B47</item>
+        <item name="android:colorPrimary">#114B47</item>
+        <item name="colorSecondary">#2D6A4F</item>
+        <item name="colorSurface">#EDE4D6</item>
+        <item name="android:colorBackground">#F8F1E4</item>
+        <item name="colorOnSurface">#1A1A1A</item>
+        <item name="colorOnBackground">#1A1A1A</item>
+        <item name="colorControlNormal">#1F7A5A</item>
+        <item name="colorControlActivated">#114B47</item>
+        <item name="colorAccent">#114B47</item>
+        <item name="android:colorAccent">#114B47</item>
+        <item name="actionBarTheme">@style/AppTheme.Widget.ActionBar.Emerald</item>
+        <item name="bottomNavigationStyle">@style/AppTheme.Widget.BottomNavigation.Emerald</item>
+    </style>
+
+    <style name="AppTheme.Main.Midnight" parent="AppTheme.Main">
+        <item name="isMonogatariTheme">false</item>
+        <item name="appThemeVariant">5</item>
+        <item name="colorPrimary">#C2A14A</item>
+        <item name="android:colorPrimary">#C2A14A</item>
+        <item name="colorSecondary">#9B8240</item>
+        <item name="colorSurface">#1A243D</item>
+        <item name="android:colorBackground">#151E33</item>
+        <item name="colorOnSurface">#F5EFE6</item>
+        <item name="colorOnBackground">#F5EFE6</item>
+        <item name="colorControlNormal">#E0D8C6</item>
+        <item name="colorControlActivated">#C2A14A</item>
+        <item name="colorAccent">#C2A14A</item>
+        <item name="android:colorAccent">#C2A14A</item>
+        <item name="actionBarTheme">@style/AppTheme.Widget.ActionBar.Midnight</item>
+        <item name="bottomNavigationStyle">@style/AppTheme.Widget.BottomNavigation.Midnight</item>
+    </style>
+
+    <style name="AppTheme.CrashReport" parent="Theme.Material3.DayNight.Dialog" />
+
+    <style name="SplashScreen" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon_transparent</item>
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+        <item name="windowSplashScreenBackground">@color/monogatari_navy</item>
+        <item name="android:windowBackground">@color/monogatari_navy</item>
+        <item name="postSplashScreenTheme">@style/AppTheme.Main</item>
+    </style>
+</resources>

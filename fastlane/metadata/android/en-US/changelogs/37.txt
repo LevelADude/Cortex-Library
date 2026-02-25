@@ -1,0 +1,30 @@
+## Alert
+- Revert back to stable compose, scroll issues return for reader stability
+
+## New
+- Added help button to Repositories view
+- Cache images in downloaded chapters
+- Clicking ACRA id copies to clipboard
+- Rudimentary input parsing when adding repository
+- Disabled license reading requirement
+- Browse help opens browse faq instead
+- Genres below description for new expansion mechanic
+- Novel information is now selectable
+
+## Fixes
+- Fix updating categories (thanks @jobobby04)
+- Fix more view not being able to scroll all the way down
+- Fix crash in AO3
+
+## Misc
+- Update gradle
+- Handle IllegalArgumentException when updating repositories
+- Update to kotlin 1.7.20
+- Update kotlinCompilerExtensionVersion to 1.3.2
+- Update coil-compose to 2.2.2
+- Update joda-time to 2.11.2
+- Update ksp to 1.7.20
+- Set jvm-default to all-compatibility
+- Migrate AboutController.kt to pure compose
+- Migrate MoreController.kt to pure compose
+- Update compose-theme-adapter to 1.1.20

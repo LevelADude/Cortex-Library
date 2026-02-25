@@ -1,0 +1,34 @@
+*.iml
+.gradle
+/gradle
+!/gradle/
+/gradle/*
+!/gradle/wrapper/
+/gradle/wrapper/*
+!/gradle/wrapper/gradle-wrapper.properties
+/local.properties
+.idea/*
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+# hide releases
+android/standard/*
+android/playstore/*
+android/fdroid/*
+android/uptodown/*
+
+
+android/build/*
+android/build/intermediates/*
+android/schemas/*
+android/database
+
+common/build/*
+common/build/intermediates/*
+
+# Secrets
+acra.properties
+acra-debug.properties
+acra-uptodown.properties
