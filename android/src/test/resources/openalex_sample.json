@@ -1,0 +1,17 @@
+{
+  "results": [
+    {
+      "id": "https://openalex.org/W123",
+      "display_name": "DNA Analysis in Modern Labs",
+      "publication_year": 2021,
+      "authorships": [
+        {"author": {"display_name": "Alice Doe"}},
+        {"author": {"display_name": "Bob Roe"}}
+      ],
+      "primary_location": {
+        "landing_page_url": "https://journal.example.com/paper-123",
+        "pdf_url": "https://journal.example.com/paper-123.pdf"
+      }
+    }
+  ]
+}
