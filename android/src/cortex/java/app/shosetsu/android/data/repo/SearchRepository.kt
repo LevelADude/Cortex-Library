@@ -1,6 +1,7 @@
 package app.shosetsu.android.data.repo
 
 import app.shosetsu.android.data.connector.ConnectorRegistry
+import app.shosetsu.android.domain.model.ContentType
 import app.shosetsu.android.domain.model.SearchResult
 import app.shosetsu.android.domain.model.Source
 import kotlinx.coroutines.async
@@ -11,10 +12,13 @@ import kotlinx.coroutines.sync.withPermit
 
 enum class SearchSortMode { Relevance, Newest, TitleAZ }
 
+enum class ContentTypeFilter { All, BooksOnly, PapersOnly }
+
 data class SearchOptions(
     val onlyWithPdf: Boolean = false,
     val sourceFilterIds: Set<String> = emptySet(),
-    val sortMode: SearchSortMode = SearchSortMode.Relevance
+    val sortMode: SearchSortMode = SearchSortMode.Relevance,
+    val contentTypeFilter: ContentTypeFilter = ContentTypeFilter.All
 )
 
 data class SearchResponse(
@@ -39,6 +43,8 @@ class SearchRepository(private val connectorRegistry: ConnectorRegistry) {
             append(options.onlyWithPdf)
             append(":sort=")
             append(options.sortMode.name)
+            append(":ctype=")
+            append(options.contentTypeFilter.name)
         }
         cache[cacheKey]?.takeIf { now - it.timestampMs <= ttlMs }?.let { return it.response }
 
@@ -68,6 +74,13 @@ class SearchRepository(private val connectorRegistry: ConnectorRegistry) {
 
         val finalResults = merged
             .let { if (options.onlyWithPdf) it.filter { result -> result.pdfUrl != null } else it }
+            .let { list ->
+                when (options.contentTypeFilter) {
+                    ContentTypeFilter.All -> list
+                    ContentTypeFilter.BooksOnly -> list.filter { it.contentType == ContentType.Book }
+                    ContentTypeFilter.PapersOnly -> list.filter { it.contentType == ContentType.Paper }
+                }
+            }
             .let { list ->
                 when (options.sortMode) {
                     SearchSortMode.Relevance -> list

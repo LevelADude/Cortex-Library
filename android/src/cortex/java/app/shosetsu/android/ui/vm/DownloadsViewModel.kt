@@ -8,6 +8,7 @@ import app.shosetsu.android.data.resolver.DirectUrlResolver
 import app.shosetsu.android.data.resolver.HtmlLinkResolver
 import app.shosetsu.android.data.resolver.OpenAlexResolver
 import app.shosetsu.android.data.resolver.PdfResolverChain
+import app.shosetsu.android.data.resolver.PmcResolver
 import app.shosetsu.android.domain.model.DownloadItem
 import app.shosetsu.android.domain.model.SearchResult
 import app.shosetsu.android.domain.model.Source
@@ -26,6 +27,7 @@ class DownloadsViewModel(
         listOf(
             DirectUrlResolver(),
             ArxivResolver(),
+            PmcResolver(),
             OpenAlexResolver(),
             HtmlLinkResolver { sourceId -> sourcesProvider().firstOrNull { it.id == sourceId } }
         )
@@ -35,6 +37,17 @@ class DownloadsViewModel(
     val resolvingIds: StateFlow<Set<String>> = _resolvingIds.asStateFlow()
 
     val downloads = downloadsRepository.downloadsFlow.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), emptyList())
+    val downloadDirectory = downloadsRepository.downloadDirectoryFlow.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), null)
+
+    fun setDownloadDirectory(path: String) = viewModelScope.launch {
+        downloadsRepository.setDownloadDirectory(path)
+    }
+
+    fun findDownloadedFilePath(result: SearchResult): String? {
+        return downloads.value.firstOrNull { it.title == result.title && it.sourceName == resolveSourceName(result.sourceId) }?.filePath
+    }
+
+    private fun resolveSourceName(sourceId: String): String = sourcesProvider().firstOrNull { it.id == sourceId }?.name ?: "Unknown Source"
 
     fun download(result: SearchResult, sourceName: String, onDone: (Result<DownloadItem>, SearchResult) -> Unit) = viewModelScope.launch {
         _resolvingIds.value = _resolvingIds.value + result.id
