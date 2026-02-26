@@ -14,3 +14,15 @@ local.properties
 *.log
 *.pdf
 *.jar
+
+# Repo hygiene additions
+**/build/
+.idea/
+*.iml
+*.keystore
+*.jks
+.DS_Store
+Thumbs.db
+*.hprof
+*.sqlite
+*.db
