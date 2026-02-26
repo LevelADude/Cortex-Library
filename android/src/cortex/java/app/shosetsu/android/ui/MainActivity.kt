@@ -64,12 +64,12 @@ class MainActivity : ComponentActivity() {
             MaterialTheme {
                 val sourcesViewModel: SourcesViewModel = viewModel(factory = CortexViewModelFactory { SourcesViewModel(sourcesRepository, connectorRegistry, debugEventsRepository) })
                 val downloadsViewModel: DownloadsViewModel = viewModel(factory = CortexViewModelFactory {
-                    DownloadsViewModel(downloadsRepository, { sourcesViewModel.sources.value }, debugEventsRepository)
+                    DownloadsViewModel(downloadsRepository, { sourcesViewModel.sources.value }, debugEventsRepository, dataStore)
                 })
                 val searchViewModel: SearchViewModel = viewModel(factory = CortexViewModelFactory {
                     SearchViewModel(searchRepository, { sourcesViewModel.sources.value }, connectivityMonitor.isOnline)
                 })
-                val settingsViewModel: SettingsViewModel = viewModel(factory = CortexViewModelFactory { SettingsViewModel(dataStore, debugEventsRepository) })
+                val settingsViewModel: SettingsViewModel = viewModel(factory = CortexViewModelFactory { SettingsViewModel(dataStore, debugEventsRepository, sourcesRepository) })
                 CortexApp(searchViewModel, sourcesViewModel, downloadsViewModel, settingsViewModel)
             }
         }

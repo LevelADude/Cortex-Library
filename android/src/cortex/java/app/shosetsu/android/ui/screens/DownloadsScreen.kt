@@ -35,8 +35,14 @@ fun DownloadsScreen(viewModel: DownloadsViewModel, onPreview: (String) -> Unit) 
                     Text("${item.sourceName} • ${item.status} (${item.progress}%)")
                     Text(item.filePath)
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Button(onClick = { onPreview(item.filePath) }) { Text("Preview") }
-                        Button(onClick = { openPdf(context, item.filePath) }) { Text("Open externally") }
+                        Button(onClick = { onPreview(item.filePath) }, enabled = item.status == "completed") { Text("Preview") }
+                        Button(onClick = { openPdf(context, item.filePath) }, enabled = item.status == "completed") { Text("Open externally") }
+                        if (item.status == "failed") {
+                            Button(onClick = { viewModel.retry(item) {} }) { Text("Retry") }
+                        }
+                        if (item.status == "queued" || item.status == "downloading") {
+                            Button(onClick = { viewModel.cancel(item) }) { Text("Cancel") }
+                        }
                     }
                 }
             }

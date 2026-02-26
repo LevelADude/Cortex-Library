@@ -7,7 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
 
-class PdfPreviewRenderer(private val maxPages: Int = 5) {
+class PdfPreviewRenderer(private val maxPages: Int = 5, private val maxDimension: Int = 1800) {
     data class PreviewPage(val pageIndex: Int, val totalPreviewPages: Int, val bitmap: Bitmap)
 
     companion object {
@@ -27,14 +27,23 @@ class PdfPreviewRenderer(private val maxPages: Int = 5) {
                     val previewCount = previewPageCount(pageCount, maxPages)
                     val safeIndex = safePageIndex(pageIndex, previewCount)
                     renderer.openPage(safeIndex).use { page ->
-                        val width = (page.width * 0.6f).toInt().coerceAtLeast(300)
-                        val height = (page.height * 0.6f).toInt().coerceAtLeast(400)
+                        val width = (page.width * 0.6f).toInt().coerceAtLeast(300).coerceAtMost(maxDimension)
+                        val height = (page.height * 0.6f).toInt().coerceAtLeast(400).coerceAtMost(maxDimension)
                         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
                         page.render(bitmap, null, null, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
                         PreviewPage(safeIndex, previewCount, bitmap)
                     }
                 }
             }
+        }.recoverCatching {
+            val msg = it.message.orEmpty()
+            if (msg.contains("password", true) || msg.contains("encrypted", true)) {
+                throw IllegalStateException("PDF is protected and cannot be previewed on-device")
+            }
+            if (msg.contains("corrupt", true) || msg.contains("invalid", true)) {
+                throw IllegalStateException("PDF is corrupt or unsupported")
+            }
+            throw it
         }
     }
 }

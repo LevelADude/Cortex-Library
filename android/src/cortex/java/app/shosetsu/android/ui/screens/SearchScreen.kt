@@ -20,6 +20,7 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
@@ -46,6 +47,10 @@ fun SearchScreen(
     val state by searchViewModel.uiState.collectAsState()
     val resolvingIds by downloadsViewModel.resolvingIds.collectAsState()
     val scope = rememberCoroutineScope()
+
+    DisposableEffect(Unit) {
+        onDispose { searchViewModel.cancelInFlightSearch() }
+    }
 
     LazyColumn(modifier = Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         item {
@@ -140,7 +145,10 @@ fun SearchScreen(
                                             if (downloadRes.isSuccess) {
                                                 "Downloaded ${result.title}"
                                             } else {
-                                                if (resolved.pdfUrl == null) "No PDF found. Open landing page from details." else "Download failed: ${downloadRes.exceptionOrNull()?.message}"
+                                                if (resolved.pdfUrl == null) {
+                                                    if (resolved.landingUrl != null) "No PDF found. Open landing from Details."
+                                                    else "No PDF found."
+                                                } else "Download failed: ${downloadRes.exceptionOrNull()?.message}"
                                             }
                                         )
                                     }

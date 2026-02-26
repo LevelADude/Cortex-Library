@@ -19,6 +19,8 @@ class CortexDataStore(private val context: Context) {
     private val persistDebugLogsKey = booleanPreferencesKey("persist_debug_logs")
     private val debugLogsKey = stringPreferencesKey("debug_logs")
     private val searchCacheKey = stringPreferencesKey("search_cache")
+    private val resolverCacheKey = stringPreferencesKey("resolver_cache")
+    private val presetCatalogStatusKey = stringPreferencesKey("preset_catalog_status")
 
     fun sourcesJson(): Flow<String?> = context.dataStore.data.map { it[sourcesKey] }
     fun downloadsJson(): Flow<String?> = context.dataStore.data.map { it[downloadsKey] }
@@ -27,6 +29,8 @@ class CortexDataStore(private val context: Context) {
     fun persistDebugLogs(): Flow<Boolean> = context.dataStore.data.map { it[persistDebugLogsKey] ?: false }
     fun debugLogsJson(): Flow<String?> = context.dataStore.data.map { it[debugLogsKey] }
     fun searchCacheJson(): Flow<String?> = context.dataStore.data.map { it[searchCacheKey] }
+    fun resolverCacheJson(): Flow<String?> = context.dataStore.data.map { it[resolverCacheKey] }
+    fun presetCatalogStatusJson(): Flow<String?> = context.dataStore.data.map { it[presetCatalogStatusKey] }
 
     suspend fun saveSourcesJson(value: String) = context.dataStore.edit { it[sourcesKey] = value }
     suspend fun saveDownloadsJson(value: String) = context.dataStore.edit { it[downloadsKey] = value }
@@ -37,6 +41,8 @@ class CortexDataStore(private val context: Context) {
     suspend fun clearDebugLogs() = context.dataStore.edit { it.remove(debugLogsKey) }
     suspend fun saveSearchCacheJson(value: String) = context.dataStore.edit { it[searchCacheKey] = value }
     suspend fun clearSearchCache() = context.dataStore.edit { it.remove(searchCacheKey) }
+    suspend fun saveResolverCacheJson(value: String) = context.dataStore.edit { it[resolverCacheKey] = value }
+    suspend fun savePresetCatalogStatusJson(value: String) = context.dataStore.edit { it[presetCatalogStatusKey] = value }
 
     suspend fun resetSettings() {
         context.dataStore.edit {
@@ -45,6 +51,8 @@ class CortexDataStore(private val context: Context) {
             it[persistDebugLogsKey] = false
             it.remove(debugLogsKey)
             it.remove(searchCacheKey)
+            it.remove(resolverCacheKey)
+            it.remove(presetCatalogStatusKey)
         }
     }
 

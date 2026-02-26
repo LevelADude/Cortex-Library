@@ -10,6 +10,7 @@ data class DownloadItem(
     val filePath: String,
     val status: String,
     val progress: Int,
+    val attempts: Int = 0,
     val addedAt: Long = System.currentTimeMillis(),
     val sourceName: String
 )
