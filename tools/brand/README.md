@@ -1,6 +1,6 @@
-# Monogatari Branding Asset Pipeline
+# Cortex Library Branding Asset Pipeline
 
-Dieses Verzeichnis enthält das Script, um aus dem bestehenden Full-Lockup (`Monogatari-Logo.png`) die App-Assets zu erzeugen.
+Dieses Verzeichnis enthält das Script, um aus dem bestehenden Full-Lockup (`Cortex Library-Logo.png`) die App-Assets zu erzeugen.
 
 ## Voraussetzung
 
@@ -16,21 +16,21 @@ pip install pillow
 ### Windows (Git Bash)
 
 ```bash
-python tools/brand/split_monogatari_assets.py
+python tools/brand/split_cortex_assets.py
 ```
 
 ### Windows (PowerShell)
 
 ```powershell
-python .\tools\brand\split_monogatari_assets.py
+python .\tools\brand\split_cortex_assets.py
 ```
 
 ## Ergebnisdateien
 
 Das Script schreibt:
 
-- `android/src/main/res/drawable/monogatari_icon.png`
-- `android/src/main/res/drawable/monogatari_wordmark.png`
+- `android/src/main/res/drawable/cortex_icon.png`
+- `android/src/main/res/drawable/cortex_wordmark.png`
 
 ## Wichtig
 

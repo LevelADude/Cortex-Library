@@ -2,7 +2,7 @@
 
 ## Why this is deferred
 
-A full rename from `app.shosetsu.android` to `app.monogatari.android` is high-risk in the current codebase because package names, storage keys, and update channels are deeply coupled.
+A full rename from `app.shosetsu.android` to `app.cortex.android` is high-risk in the current codebase because package names, storage keys, and update channels are deeply coupled.
 
 ## Risks
 
@@ -22,6 +22,6 @@ A full rename from `app.shosetsu.android` to `app.monogatari.android` is high-ri
 
 ## Minimal safe changes applied now
 
-- User-facing labels and copy updated to Monogatari.
+- User-facing labels and copy updated to Cortex Library.
 - Added this plan and branding audit documentation.
 - Kept technical identifiers unchanged to avoid breaking existing installs.

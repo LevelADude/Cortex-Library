@@ -8,4 +8,4 @@ Quick checklist for app theme regressions:
 - [ ] Bottom navigation/rail uses theme-driven background and selected/unselected icon/text tints.
 - [ ] More screen list uses themed icon accents and readable text/divider colors.
 - [ ] Emerald Manuscript and Midnight Inc (Gold) apply subtle texture on Compose screen backgrounds.
-- [ ] No user-facing references to "Monogatari Default" remain.
+- [ ] No user-facing references to "Cortex Default" remain.
