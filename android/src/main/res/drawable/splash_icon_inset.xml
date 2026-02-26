@@ -3,5 +3,5 @@
     android:inset="24dp">
     <bitmap
         android:gravity="center"
-        android:src="@drawable/monogatari_icon" />
+        android:src="@drawable/cortex_icon" />
 </inset>

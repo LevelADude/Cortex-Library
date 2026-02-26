@@ -1,4 +1,4 @@
-# Extended Manual Parsing Guide (Monogatari)
+# Extended Manual Parsing Guide (Cortex Library)
 
 This guide shows a **real, reproducible Manual Parsing setup** using one working extension from this repository’s extension pack.
 
@@ -13,7 +13,7 @@ This guide shows a **real, reproducible Manual Parsing setup** using one working
 
 ## 1) Page map (what URL each parser target uses)
 
-| Parser target in Monogatari | Example URL pattern | Notes |
+| Parser target in Cortex Library | Example URL pattern | Notes |
 |---|---|---|
 | Listing / Browse | `https://rainofsnow.com/novels/page/1` | Extension builds this from order + page. |
 | Latest listing | `https://rainofsnow.com/latest-release/page/1` | Same card structure as listing. |
@@ -29,7 +29,7 @@ Use this as your copy/paste mapping when filling Manual Parsing fields.
 
 ### A. Listing cards (Browse/Latest/Search)
 
-| Monogatari Manual Parsing field | Selector / Attribute | Purpose | Derived from extension |
+| Cortex Library Manual Parsing field | Selector / Attribute | Purpose | Derived from extension |
 |---|---|---|---|
 | Item selector | `div.minbox` | Selects each novel card container. | `parseListing(): doc:select("div.minbox")` |
 | Title selector | `a` + attribute `title` | Extracts novel title from anchor title attribute. | `title = a:attr("title")` |
@@ -38,7 +38,7 @@ Use this as your copy/paste mapping when filling Manual Parsing fields.
 
 ### B. Novel details page
 
-| Monogatari field | Selector / Attribute | Purpose | Derived from extension |
+| Cortex Library field | Selector / Attribute | Purpose | Derived from extension |
 |---|---|---|---|
 | Novel title | `div.queen div.text > h2` (text) | Main novel title on detail page. | `title = content:selectFirst("div.text > h2"):text()` |
 | Cover image | `div.queen img` + `data-src` | Novel cover image. | `imageURL = ... selectFirst("img"):attr("data-src")` |
@@ -48,7 +48,7 @@ Use this as your copy/paste mapping when filling Manual Parsing fields.
 
 ### C. Chapters list
 
-| Monogatari field | Selector / Attribute | Purpose | Derived from extension |
+| Cortex Library field | Selector / Attribute | Purpose | Derived from extension |
 |---|---|---|---|
 | Chapter item selector | `#chapter ul.march1 li` | Each chapter row. | `...select("#chapter ul.march1"):select("li")` |
 | Chapter title | `a` (text) | Chapter display title. | `title = v:selectFirst("a"):text()` |
@@ -57,7 +57,7 @@ Use this as your copy/paste mapping when filling Manual Parsing fields.
 
 ### D. Passage/content extraction
 
-| Monogatari field | Selector | Purpose | Derived from extension |
+| Cortex Library field | Selector | Purpose | Derived from extension |
 |---|---|---|---|
 | Chapter content selector | `.zoomdesc-cont` | Main chapter HTML container to render. | `chap = chap:selectFirst(".zoomdesc-cont")` |
 | Optional injected heading | `li.menu-toc-current` (text) | Extension prepends this as `<h1>`. | `title = chap:selectFirst("li.menu-toc-current"):text()` |

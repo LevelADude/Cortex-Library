@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Split Monogatari lockup into icon + wordmark assets.
+"""Split Cortex lockup into icon + wordmark assets.
 
 Input:
-  ./Monogatari-Logo.png
+  ./Cortex-Logo.png
 
 Outputs:
-  android/src/main/res/drawable/monogatari_icon.png
-  android/src/main/res/drawable/monogatari_wordmark.png
+  android/src/main/res/drawable/cortex_icon.png
+  android/src/main/res/drawable/cortex_wordmark.png
 """
 
 from __future__ import annotations
@@ -17,11 +17,11 @@ from pathlib import Path
 from PIL import Image, ImageFilter
 
 INPUT_CANDIDATES = (
-    Path("Monogatari-Logo.png"),
-    Path("MonogatariLogo.png"),
+    Path("Cortex-Logo.png"),
+    Path("CortexLogo.png"),
 )
-OUTPUT_ICON = Path("android/src/main/res/drawable/monogatari_icon.png")
-OUTPUT_WORDMARK = Path("android/src/main/res/drawable/monogatari_wordmark.png")
+OUTPUT_ICON = Path("android/src/main/res/drawable/cortex_icon.png")
+OUTPUT_WORDMARK = Path("android/src/main/res/drawable/cortex_wordmark.png")
 
 # Fallbacks are (left, top, right, bottom), tuned for vertical lockup layout.
 FALLBACK_ICON_BOX = (110, 40, 910, 700)

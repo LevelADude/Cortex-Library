@@ -1,6 +1,6 @@
 # Rebrand audit
 
-This repository has been updated so user-facing branding uses **Monogatari**.
+This repository has been updated so user-facing branding uses **Cortex Library**.
 
 ## Intentionally not renamed technical identifiers
 
