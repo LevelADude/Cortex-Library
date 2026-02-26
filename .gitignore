@@ -61,3 +61,8 @@ Thumbs.db
 *.log
 *.pdf
 *.jar
+
+# Repo hygiene additions
+*.hprof
+*.sqlite
+*.db
