@@ -44,7 +44,7 @@ class SettingsViewModel(
     fun importCatalog(selectedPresetIds: Set<String>, overrideEnabled: Boolean) = viewModelScope.launch {
         val catalog = _previewCatalog.value ?: return@launch
         val result = sourcesRepository.importCatalogPresets(catalog, selectedPresetIds, overrideEnabled)
-        debugEventsRepository.log(DebugLevel.Info, "catalog", "Imported preset catalog", details = "added=${result.added},replaced=${result.replaced}")
+        debugEventsRepository.log(DebugLevel.Info, "catalog", "Imported Preset Catalog", details = "added=${result.added},replaced=${result.replaced}")
     }
 
     suspend fun exportSourcesAsCatalogJson(): String = sourcesRepository.exportSourcesAsCatalogJson()

@@ -45,9 +45,11 @@ import app.shosetsu.android.ui.vm.DownloadsViewModel
 import app.shosetsu.android.ui.vm.SearchViewModel
 import app.shosetsu.android.ui.vm.SourcesViewModel
 import app.shosetsu.android.ui.vm.SettingsViewModel
+import app.shosetsu.android.util.openPdf
 import java.net.URLDecoder
 import java.net.URLEncoder
 
+// TODO(cortex): Migrate legacy `app.shosetsu.android` package namespace to a Cortex-specific namespace.
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -128,7 +130,7 @@ fun CortexApp(
                 val encodedPath = entry.arguments?.getString("filePath").orEmpty()
                 val filePath = URLDecoder.decode(encodedPath, Charsets.UTF_8.name())
                 PdfPreviewScreen(filePath = filePath, renderer = previewRenderer, onOpenExternal = {
-                    app.shosetsu.android.util.openPdf(navController.context, filePath)
+                    openPdf(navController.context, filePath)
                 })
             }
             composable(Destinations.Sources.route) { SourcesScreen(sourcesViewModel) }
