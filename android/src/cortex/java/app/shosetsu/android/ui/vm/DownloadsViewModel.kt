@@ -8,8 +8,13 @@ import app.shosetsu.android.data.resolver.ArxivResolver
 import app.shosetsu.android.data.resolver.DirectUrlResolver
 import app.shosetsu.android.data.resolver.HtmlLinkResolver
 import app.shosetsu.android.data.resolver.OpenAlexResolver
+import app.shosetsu.android.data.resolver.OpenStaxResolver
 import app.shosetsu.android.data.resolver.PdfResolverChain
+import app.shosetsu.android.data.resolver.PdfResolutionVerifier
 import app.shosetsu.android.data.resolver.PmcResolver
+import app.shosetsu.android.data.resolver.ResolverCache
+import app.shosetsu.android.data.resolver.StandardEbooksResolver
+import app.shosetsu.android.data.store.CortexDataStore
 import app.shosetsu.android.domain.model.DownloadItem
 import app.shosetsu.android.domain.model.DebugLevel
 import app.shosetsu.android.domain.model.SearchResult
@@ -24,15 +29,20 @@ import kotlinx.coroutines.launch
 class DownloadsViewModel(
     private val downloadsRepository: DownloadsRepository,
     private val sourcesProvider: () -> List<Source>,
-    private val debugEventsRepository: DebugEventsRepository
+    private val debugEventsRepository: DebugEventsRepository,
+    dataStore: CortexDataStore
 ) : ViewModel() {
+    private val verifier = PdfResolutionVerifier()
+    private val resolverCache = ResolverCache(dataStore)
     private val resolver = PdfResolverChain(
         listOf(
-            DirectUrlResolver(),
+            DirectUrlResolver(verifier) { sourceId -> sourcesProvider().firstOrNull { it.id == sourceId } },
             ArxivResolver(),
             PmcResolver(),
             OpenAlexResolver(),
-            HtmlLinkResolver { sourceId -> sourcesProvider().firstOrNull { it.id == sourceId } }
+            StandardEbooksResolver(),
+            OpenStaxResolver(),
+            HtmlLinkResolver({ sourceId -> sourcesProvider().firstOrNull { it.id == sourceId } }, verifier, resolverCache)
         ),
         debugEventsRepository
     )
@@ -69,5 +79,13 @@ class DownloadsViewModel(
         }
         _resolvingIds.value = _resolvingIds.value - result.id
         onDone(response, resolved)
+    }
+
+    fun retry(item: DownloadItem, onDone: (Result<DownloadItem>) -> Unit) = viewModelScope.launch {
+        onDone(downloadsRepository.retryDownload(item.id, item.sourceName))
+    }
+
+    fun cancel(item: DownloadItem) = viewModelScope.launch {
+        downloadsRepository.cancelDownload(item.id)
     }
 }

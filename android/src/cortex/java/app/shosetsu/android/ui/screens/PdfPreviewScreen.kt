@@ -11,6 +11,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -33,8 +34,16 @@ fun PdfPreviewScreen(
     var cachedPage by remember { mutableStateOf<PdfPreviewRenderer.PreviewPage?>(null) }
 
     LaunchedEffect(filePath, pageIndex) {
+        cachedPage?.bitmap?.recycle()
         previewState = renderer.open(filePath, pageIndex)
         previewState?.getOrNull()?.let { cachedPage = it }
+    }
+
+    DisposableEffect(Unit) {
+        onDispose {
+            cachedPage?.bitmap?.recycle()
+            cachedPage = null
+        }
     }
 
     Column(

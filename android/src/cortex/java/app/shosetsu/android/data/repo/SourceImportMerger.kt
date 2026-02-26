@@ -11,6 +11,7 @@ data class SourceMergeResult(
 
 object SourceImportMerger {
     fun merge(existing: List<Source>, imported: List<Source>): SourceMergeResult {
+        val existingByStablePreset = existing.filter { it.stablePresetId != null }.associateBy { it.stablePresetId }
         val existingByComposite = existing.associateBy { compositeKey(it) }
         val existingById = existing.associateBy { it.id }
         val merged = existing.toMutableList()
@@ -19,8 +20,10 @@ object SourceImportMerger {
 
         imported.forEach { incoming ->
             val idxById = merged.indexOfFirst { it.id == incoming.id }
+            val idxByStablePreset = merged.indexOfFirst { it.stablePresetId != null && it.stablePresetId == incoming.stablePresetId }
             val idxByComposite = merged.indexOfFirst { compositeKey(it) == compositeKey(incoming) }
             val replacementIndex = when {
+                incoming.stablePresetId != null && incoming.stablePresetId in existingByStablePreset -> idxByStablePreset
                 incoming.id in existingById -> idxById
                 compositeKey(incoming) in existingByComposite -> idxByComposite
                 else -> -1

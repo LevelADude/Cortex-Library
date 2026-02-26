@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cortex-library/catalog.schema.json",
+  "title": "Cortex Preset Catalog",
+  "type": "object",
+  "required": ["catalogVersion", "updatedAt", "presets"],
+  "properties": {
+    "catalogVersion": { "const": 1 },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "presets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "stablePresetId", "name", "type", "baseUrl", "enabledByDefault",
+          "notes", "tags", "contentTypesSupported", "enablePdfResolution",
+          "allowedPdfDomains", "limitOverride", "configJson"
+        ],
+        "properties": {
+          "stablePresetId": { "type": "string", "minLength": 1 },
+          "name": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["Api", "GenericWeb"] },
+          "baseUrl": { "type": "string", "minLength": 1 },
+          "enabledByDefault": { "type": "boolean" },
+          "notes": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "contentTypesSupported": { "enum": ["books", "papers", "both"] },
+          "enablePdfResolution": { "type": "boolean" },
+          "allowedPdfDomains": { "type": "array", "items": { "type": "string" } },
+          "limitOverride": { "type": ["integer", "null"] },
+          "configJson": { "type": "string", "minLength": 2 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -85,4 +85,14 @@ class SearchViewModel(
         val s = _uiState.value
         searchInternal(s.query, s.onlyWithPdf, s.sourceFilterIds, s.sortMode, s.contentTypeFilter)
     }
+
+    fun cancelInFlightSearch() {
+        activeSearchJob?.cancel()
+        _uiState.update { it.copy(isLoading = false) }
+    }
+
+    override fun onCleared() {
+        cancelInFlightSearch()
+        super.onCleared()
+    }
 }
