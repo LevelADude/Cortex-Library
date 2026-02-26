@@ -1,17 +1,29 @@
-# Pull requests
+# Contributing
 
-- If the modification you have made is to the main branch inorder to fix an issue/error/bug, then have the merge request target main.
-- If the modification is for a new experimental feature, push to development.
+Thanks for helping improve Cortex Library.
 
-# Commit Message style
+## Before you start
+- Open an issue for bugs, regressions, or large features.
+- Keep changes focused and easy to review.
+- Do not include unrelated refactors in the same PR.
 
-If you have the time and ability, I recommend following the [Conventional Commits][cc] standard.
+## Development basics
+1. Fork and create a feature branch.
+2. Build locally:
+   ```bash
+   ./gradlew :android:assembleDebug
+   ```
+3. Run tests:
+   ```bash
+   ./gradlew :android:testDebugUnitTest
+   ```
+4. Submit a pull request using the PR template.
 
-Here are some sample commit headers:
+## Pull request checklist
+- [ ] Change is scoped and documented.
+- [ ] Tests added/updated when behavior changes.
+- [ ] No secrets, tokens, or private endpoints committed.
+- [ ] UI changes include screenshots when applicable.
 
-1. `feat: Add style support`
-2. `fix(reader): Resolve crashing from fast device rotation`
-3. `misc: Update README`
-
-
-[cc]: https://www.conventionalcommits.org/en/v1.0.0/
+## Commit messages
+Conventional Commits are preferred (for example `feat:`, `fix:`, `docs:`).
