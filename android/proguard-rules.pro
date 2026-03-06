@@ -32,17 +32,17 @@
 
 -keep,includedescriptorclasses class app.shosetsu.android.common.* { *; }
 
-# Keep lib intact
--keepclasseswithmembers class app.shosetsu.lib.** { *; }
+# Keep active app/runtime packages intact
+-keepclasseswithmembers class app.shosetsu.android.** { *; }
 -keepclasseswithmembers class org.luaj.** { *; }
 -keepclasseswithmembers class org.jsoup.** { *; }
 -keepclasseswithmembers class okhttp3.** { *; }
 
--keep,includedescriptorclasses class app.shosetsu.**$$serializer { *; } # <-- change package name to your app's
--keepclassmembers class app.shosetsu.* { # <-- change package name to your app's
+-keep,includedescriptorclasses class app.shosetsu.android.**$$serializer { *; }
+-keepclassmembers class app.shosetsu.android.** {
     *** Companion;
 }
--keepclasseswithmembers class app.shosetsu.* { # <-- change package name to your app's
+-keepclasseswithmembers class app.shosetsu.android.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
 
@@ -134,4 +134,3 @@
 
 -keep, allowobfuscation, allowoptimization class * extends org.kodein.type.TypeReference
 -keep, allowobfuscation, allowoptimization class * extends org.kodein.type.JVMAbstractTypeToken$Companion$WrappingTest
-
